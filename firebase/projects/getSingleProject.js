@@ -26,25 +26,25 @@ export default function GetSingleProject({ project }) {
                 ))}
               </div>
             )}
-            <div className="flex flex-row gap-6 text-lg lg:text-xl xl:text-2xl pt-5">
+            <div className="flex flex-row gap-6 text-3xl lg:text-xl xl:text-2xl pt-5">
               {project.repository && (
                 <div>
                   <a href={project.repository} target="_blank" rel="noreferrer">
-                    <i className="bi bi-github" />
+                    <i className="bi bi-github" aria-label="Github" />
                   </a>                        
                 </div>
               )}
               {project.website && (
                 <div>          
                 <a href={project.website} target="_blank" rel="noreferrer">
-                  <i className="bi bi-box-arrow-up-right" />
+                  <i className="bi bi-box-arrow-up-right" aria-label="Link" />
                 </a>
               </div>
               )}
               {project.report && (
                 <div>
                   <a href={project.report} target="_blank" rel="noreferrer">
-                    <i className="bi bi-file-earmark-pdf" />
+                    <i className="bi bi-file-earmark-pdf" aria-label="File" />
                   </a>
                 </div>
               )}

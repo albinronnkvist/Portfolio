@@ -39,49 +39,50 @@ export default function GetSingleCourse({course}) {
                   <li>{t("experience:education.points")}: {course.points}</li>
                   <li>{t("experience:education.level")}: {course.level}</li>
                   <li>{t("experience:education.complete")}: {course.year}</li>
-                  <li>
-                    <div className="flex flex-row gap-4">   
-                      Projekt: 
-                      {course.repository && ( 
-                        <a 
-                          href={course.repository} 
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                            <i className="bi bi-github"></i>
-                        </a> 
-                      )}
-                      {course.website && (
-                        <a 
-                          href={course.website} 
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                            <i className="bi bi-box-arrow-up-right"></i>
-                        </a> 
-                      )}
-                      {course.report && (
-                        <a 
-                          href={course.report} 
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                            <i className="bi bi-file-earmark-pdf"></i> 
-                        </a> 
-                      )}
-                    </div>
-                  </li>
                 </ul>
                 <a 
                   href={course.courseplan} 
                   target="_blank"
-                  className="text-xs sm:text-sm md:text-sm xl:text-base 2xl:text-lg mt-4"
+                  className="text-base sm:text-sm md:text-sm xl:text-base 2xl:text-lg"
                 >
-                  {t("experience:education.seeCourseplan")} <i class="bi bi-box-arrow-up-right"></i>
+                  {t("experience:education.seeCourseplan")} <i class="bi bi-box-arrow-up-right" aria-label="Link" />
                 </a>
+                <div>
+                  <h2 className="mt-12 mb-2">
+                    {t("experience:education.project")}
+                  </h2>
+                  <div className="flex flex-row gap-6 text-3xl lg:text-xl xl:text-2xl">
+                    {course.repository && ( 
+                      <a 
+                        href={course.repository} 
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                          <i className="bi bi-github" aria-label="Github" />
+                      </a> 
+                    )}
+                    {course.website && (
+                      <a 
+                        href={course.website} 
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                          <i className="bi bi-box-arrow-up-right" aria-label="Link" />
+                      </a> 
+                    )}
+                    {course.report && (
+                      <a 
+                        href={course.report} 
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                          <i className="bi bi-file-earmark-pdf" aria-label="File" /> 
+                      </a> 
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
-
           </div>
         ) : (
           <Loading />

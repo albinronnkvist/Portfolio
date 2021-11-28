@@ -1,6 +1,5 @@
 import setLanguage from 'next-translate/setLanguage'
 import Select, { components } from 'react-select';
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { motion } from "framer-motion"
 
@@ -10,21 +9,20 @@ export default function changeLanguage() {
   const { Option } = components
   const CustomSelectOption = props => (
     <Option {...props}>
-      <Image src={props.data.icon}
-        width={30}
-        height={30}
+      <img 
+        src={props.data.icon}
         alt={props.data.label}
+        className="w-16 md:12"
       />
     </Option>
   )
 
   const CustomSelectValue = props => (
     <div>
-      <Image 
+      <img 
         src={props.data.icon} 
-        width={30}
-        height={30}
         alt={props.data.label}
+        className="w-16 md:w-10 mb-2"
       />
     </div>
   )
@@ -65,8 +63,8 @@ export default function changeLanguage() {
   }
 
   const options = [
-    { value: 'sv', label: 'Swedish', icon: '/images/sweden.png' },
-    { value: 'en-US', label: 'English', icon: '/images/us.png' }
+    { value: 'sv', label: 'Swedish', icon: '/images/sv.svg' },
+    { value: 'en-US', label: 'English', icon: '/images/us.svg' }
   ]
 
   const changeLanguage = (e) => {

@@ -58,8 +58,8 @@
     @apply dark:hover:text-black-dark;
     @apply hover:text-white;
     @apply border rounded; 
-    @apply px-4 py-2 mt-6 shadow-xl; 
-    @apply text-xs md:text-sm xl:text-base;
+    @apply px-5 py-3 mt-6 shadow-xl; 
+    @apply text-base xl:text-base;
   }
 
   .readMoreFilled {
@@ -71,8 +71,8 @@
     @apply hover:opacity-75;
     @apply transition-opacity duration-200;
     @apply rounded; 
-    @apply px-4 py-2 mt-6 shadow-xl; 
-    @apply text-xs md:text-sm xl:text-base;
+    @apply px-5 py-3 mt-6 shadow-xl; 
+    @apply text-base xl:text-base;
   }
 
   .submit {

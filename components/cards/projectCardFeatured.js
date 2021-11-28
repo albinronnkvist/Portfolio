@@ -41,7 +41,7 @@ export default function ProjectCardFeatured({ projects }) {
                       ))}
                     </div>
                   )}
-                  <div className="flex flex-row gap-6 text-lg lg:text-xl xl:text-2xl pt-5">
+                  <div className="flex flex-row gap-6 text-3xl lg:text-xl xl:text-2xl pt-5">
                     {project.repository && (
                       <div>
                         <a href={project.repository} target="_blank" rel="noreferrer" aria-label="github">

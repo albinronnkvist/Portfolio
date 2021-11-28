@@ -18,7 +18,7 @@ export default function changeTheme() {
         whileFocus={{ scale: 1.1 }} 
         whileTap={{ scale: 0.9 }}
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} 
-        className="overflow-hidden text-lg md:mt-0 ml-4 md:ml-1 p-2 lg:px-4 text-center rounded hover:bg-primary-default dark:hover:bg-primary-default dark:hover:text-white transition-colors duration-300"
+        className="text-4xl md:text-lg md:mt-0 ml-4 md:ml-1 p-2 lg:px-4 text-center rounded hover:bg-primary-default dark:hover:bg-primary-default dark:hover:text-white transition-colors duration-300"
       >
         <i 
           className="bi bi-brightness-high-fill text-yellow-200" 
@@ -31,7 +31,7 @@ export default function changeTheme() {
         whileFocus={{ scale: 1.1 }} 
         whileTap={{ scale: 0.9 }} 
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} 
-        className="text-lg md:mt-0 ml-4 md:ml-1 p-2 lg:px-4 text-center rounded hover:bg-primary-default dark:hover:bg-primary-default dark:hover:text-white transition-colors duration-300"
+        className="text-4xl md:text-lg md:mt-0 ml-4 md:ml-1 p-2 lg:px-4 text-center rounded hover:bg-primary-default dark:hover:bg-primary-default dark:hover:text-white transition-colors duration-300"
       >
         <i
           className="bi bi-moon-fill text-yellow-200"

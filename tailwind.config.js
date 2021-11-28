@@ -114,6 +114,7 @@ module.exports = {
       current: 'currentColor',
       primary: {
         darker: '#00632f',
+        dark2: '#1aa975',
         dark: '#2ebd89',
         default: '#34D399',
         light: '#48d7a3'

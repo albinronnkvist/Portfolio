@@ -47,7 +47,6 @@ export default function Experience() {
                   scale: 1,
                   opacity: 1,
                   transition: {
-                    delay: .3,
                     duration: .3
                   }
                 }
