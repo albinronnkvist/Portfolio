@@ -6,7 +6,7 @@ import { doc, getDoc, collection, getDocs, query, orderBy } from '@firebase/fire
 import AdminDeleteTechnology from "../../../../firebase/experience/technologies/AdminDeleteTechnology";
 import AdminEditTechnology from "../../../../firebase/experience/technologies/adminEditTechnology";
 
-export default function AdminEditTechnology({ technology, categories }) {
+export default function AdminSingleTechnology({ technology, categories }) {
   const { t } = useTranslation()
 
   const crumbs = [

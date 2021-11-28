@@ -5,7 +5,7 @@ import Experience from '../components/sections/startPage/experience'
 import Projects from '../components/sections/startPage/projects'
 import Link from 'next/link'
 import StarterImage from '../components/animations/starterImage'
-import LandingImage from '../components/images/LandingImage'
+import LandingImage from '../components/customImages/LandingImage'
 
 export default function Home() {
   let { t } = useTranslation()
