@@ -1,0 +1,15 @@
+{
+  "title": "About",
+  "intro": "An ordinary guy with a huge passion for web development and technology in general.",
+  "text": "My interest in technology and code began when I was young, when my brother and I started playing games on the family computer. After a while, the games became boring, which led me to start exploring mods, harmless cheats, glitches and other things that affect the game, which I thought was extremely exciting.",
+  "text2": "This interest led me to apply for the Technology program in high school. There I read an introductory course to web development in 2015 which I really fell for. I could sit for hours and code without thinking about the time. That was when I knew web development was something for me.",
+  "text3": "6 years later and my interest in the subject just keeps increasing and I can't imagine doing anything else!",
+  "text4": "When I am not programming, I spend time with family, friends and my girlfriend. I also do a lot of activities when I have time left over.",
+
+  "interests": "Interests",
+
+  "metaTags": {
+    "description": "About me and my interests",
+    "keywords": "About, Interests, Web development"
+  }
+}

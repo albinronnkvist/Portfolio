@@ -1,0 +1,175 @@
+/* Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html {
+    @apply font-mono;
+  }
+
+  h1 {
+    @apply mt-2;
+    @apply mb-2;
+    @apply text-4xl md:text-5xl xl:text-6xl;
+    @apply text-black-dark; 
+    @apply dark:text-white; 
+    @apply font-semibold;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl xl:text-5xl;
+    @apply text-black-dark; 
+    @apply dark:text-white; 
+    @apply font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl xl:text-3xl;
+    @apply text-black-dark; 
+    @apply dark:text-white; 
+    @apply font-semibold;
+  }
+
+  h4 {
+    @apply text-base lg:text-lg xl:text-2xl; 
+    @apply text-black-dark; 
+    @apply dark:text-white; 
+    @apply font-semibold;
+  }
+
+  a {
+    @apply font-mono;
+    @apply dark:text-primary-default;
+    @apply text-primary-dark;
+  }
+
+  a:hover { text-shadow: 0px 0px 12px rgb(52, 211, 153); }
+
+  a:focus { text-shadow: 0px 0px 12px rgb(52, 211, 153); }
+
+  .readMore {
+    @apply font-mono;
+    @apply dark:text-primary-default;
+    @apply text-primary-dark;
+    @apply dark:hover:bg-primary-default;
+    @apply hover:bg-primary-dark hover:border-primary-default dark:hover:border-primary-default;
+    @apply dark:hover:text-black-dark;
+    @apply hover:text-white;
+    @apply border rounded; 
+    @apply px-4 py-2 mt-6 shadow-xl; 
+    @apply text-xs md:text-sm xl:text-base;
+  }
+
+  .readMoreFilled {
+    @apply font-mono font-medium tracking-widest;
+    @apply dark:text-black-dark;
+    @apply text-white;
+    @apply dark:bg-primary-default;
+    @apply bg-primary-dark;
+    @apply hover:opacity-75;
+    @apply transition-opacity duration-200;
+    @apply rounded; 
+    @apply px-4 py-2 mt-6 shadow-xl; 
+    @apply text-xs md:text-sm xl:text-base;
+  }
+
+  .submit {
+    @apply font-mono;
+    @apply text-white;
+    @apply dark:text-black-dark;
+    @apply dark:bg-primary-default;
+    @apply bg-primary-dark;
+    @apply transition-opacity duration-300;
+    @apply px-4 py-2 mt-6 rounded; 
+    @apply text-xs md:text-sm xl:text-base;
+    @apply hover:opacity-75;
+  }
+
+  .formInput {
+    @apply px-2 py-1; 
+    @apply text-xs md:text-sm xl:text-base; 
+    @apply rounded;
+    @apply w-full;
+  }
+
+  .formInputButton {
+    @apply px-2 py-1; 
+    @apply text-xs md:text-xs xl:text-sm; 
+    @apply rounded;
+    @apply w-full;
+    @apply text-white;
+    @apply dark:text-black-dark;
+    @apply dark:bg-primary-default;
+    @apply bg-primary-dark;
+    @apply hover:opacity-75;
+    @apply cursor-pointer;
+  }
+
+  .eduCard:hover h4 { 
+    color: #34D399
+  }
+
+  label {
+    @apply text-xs md:text-sm xl:text-base; 
+    @apply dark:text-white text-black-light;
+  }
+
+  p {
+    @apply text-xs sm:text-sm md:text-sm xl:text-base 2xl:text-lg;
+    @apply dark:text-white text-gray-light; 
+    @apply break-words;
+    @apply leading-6;
+  }
+
+  li {
+    @apply text-xs sm:text-sm md:text-sm xl:text-base 2xl:text-lg;
+    @apply mb-3;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.discs::before {
+  content: "\2022";
+  color: #34D399;
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+/* Progress-bar */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #34D399;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1.0;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}

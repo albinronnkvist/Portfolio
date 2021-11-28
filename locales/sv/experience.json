@@ -1,0 +1,42 @@
+{
+  "title": "Erfarenhet",
+  "intro": "För tillfället studerar jag Datateknik på Mittuniversitet med fokus på Webbutveckling. På sidan av det jobbar jag med flera sidoprojekt för att lära mig olika teknologier och arbetssätt.",
+
+  "education": {
+    "title": "Utbildning",
+    "intro": "För tillfället läser jag datateknik med inriktning webbutveckling på Mittuniversitetet och bygger ständigt applikationer på sidan av för att lära mig mer.",
+    "myCourses": "Mina kurser",
+    "credits": "Högskolepoäng",
+    "semester": "Termin",
+    "complete": "Slutförd",
+    "inProgress": "Pågående",
+    "level": "Nivå",
+    "grade": "Betyg",
+    "aboutCourse": "Om kursen",
+    "project": "Projekt",
+    "seeCourseplan": "Se kursplanen",
+    "moreInfo": "Mer info",
+    "points": "Poäng",
+    "website": "Hemsida",
+    "report": "Rapport"
+  },
+
+  "technologies": {
+    "title": "Teknologier",
+    "intro": "",
+    "recentlyTitle": "Nyligen",
+    "recentlyText": "Här är några tekniker som jag nyligen jobbat med:",
+    "allTitle": "Alla",
+    "allText": "Fler teknologier som jag jobbat med under min tid som utvecklare:"
+  },
+
+  "work": {
+    "title": "Arbete",
+    "intro": "Tidigare arbetsplatser och referenser."
+  },
+
+  "metaTags": {
+    "description": "Min erfarenhet av webbutveckling med studier, teknologier och jobb",
+    "keywords": "Erfarenhet, Universitet, Studera, Skola, Teknologier, Ramverk, Jobb"
+  }
+}

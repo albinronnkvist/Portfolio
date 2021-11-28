@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.7.1",
+    "firebase": "^9.4.1",
+    "firebase-admin": "^10.0.0",
+    "framer-motion": "^5.3.0",
+    "hamburger-react": "^2.4.1",
+    "next": "latest",
+    "next-sitemap": "^1.6.203",
+    "next-themes": "0.0.15",
+    "next-translate": "^1.2.0",
+    "nextjs-breadcrumbs": "^1.1.9",
+    "nprogress": "^0.2.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^17.0.2",
+    "react-cool-inview": "^2.0.8",
+    "react-dom": "17.0.2",
+    "react-headroom": "^3.2.0",
+    "react-intersection-observer": "^8.32.2",
+    "react-responsive-carousel": "^3.2.22",
+    "react-select": "^5.2.1",
+    "react-spinners": "^0.11.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "next-transpile-modules": "^9.0.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Projects",
+  "intro": "I have managed to create some projects during my relatively short time as a developer, both for myself and for others.",
+
+  "featured": {
+    "title": "Featured projects",
+    "intro": "My favourite projects i've ever worked on!"
+  },
+
+  "other": {
+    "title": "Other projects",
+    "intro": "Some other noteworthy projects."
+  },
+
+  "metaTags": {
+    "description": "My projects",
+    "keywords": "Projects, Web development projects"
+  }
+}

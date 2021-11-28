@@ -1,0 +1,8 @@
+{
+  "error": "Fel",
+  "meNotYou": "Det är inte du, det är jag!",
+
+  "education": {
+    "getAllError": "Kunde inte hämta kurserna, försök igen senare."
+  }
+}

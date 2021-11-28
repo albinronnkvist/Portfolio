@@ -1,0 +1,25 @@
+{
+  "menu": {
+    "start": "Start",
+    "about": "Om mig",
+    "experience": "Erfarenhet",
+    "education": "Utbildning",
+    "technologies": "Teknologier",
+    "projects": "Projekt",
+    "contact": "Kontakt"
+  },
+
+  "subSections": {
+    "education": "Utbildning",
+    "technologies": "Teknologier",
+    "featuredProjects": "Utvalda projekt",
+    "otherProjects": "Andra projekt"
+  },
+
+  "pageNotFound": "Sidan finns ej",
+  "backToStart": "Gå tillbaka till start",
+  "changeLanguage": "Byt språk",
+  "changeTheme": "Byt tema",
+  "darkMode": "Mörkt tema",
+  "lightMode": "Ljust tema"
+}

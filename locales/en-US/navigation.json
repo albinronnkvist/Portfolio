@@ -1,0 +1,25 @@
+{
+  "menu": {
+    "start": "Start",
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "technologies": "Technologies",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+
+  "subSections": {
+    "education": "Education",
+    "technologies": "Technologies",
+    "featuredProjects": "Featured projects",
+    "otherProjects": "Other projects"
+  },
+
+  "pageNotFound": "Page not found",
+  "backToStart": "Go back to start",
+  "changeLanguage": "Change language",
+  "changeTheme": "Change theme",
+  "darkMode": "Dark mode",
+  "lightMode": "Light mode"
+}

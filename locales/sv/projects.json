@@ -1,0 +1,19 @@
+{
+  "title": "Projekt",
+  "intro": "Jag har hunnit skapa en del projekt under min relativt korta tid som utvecklare, både till mig själv och till andra.",
+
+  "featured": {
+    "title": "Utvalda projekt",
+    "intro": "Mina favoritprojekt!"
+  },
+
+  "other": {
+    "title": "Andra projekt",
+    "intro": "Några andra anmärkningsvärda projekt."
+  },
+
+  "metaTags": {
+    "description": "Mina projekt",
+    "keywords": "Projekt, Webbutvecklings-projekt"
+  }
+}

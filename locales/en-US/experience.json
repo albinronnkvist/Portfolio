@@ -1,0 +1,42 @@
+{
+  "title": "Experience",
+  "intro": "I am currently studying Computer Engineering at Mid Sweden University with focus on Web Development. On the side of it, I work on several side projects to learn different technnologies and techniques.",
+
+  "education": {
+    "title": "Education",
+    "intro": "I am currently studying Computer Engineering at Mid Sweden University with focus on Web Development.",
+    "myCourses": "My courses",
+    "credits": "Higher education credits",
+    "semester": "Semester",
+    "complete": "Complete",
+    "inProgress": "In progress",
+    "level": "Level",
+    "grade": "Grade",
+    "aboutCourse": "About the course",
+    "project": "Project",
+    "seeCourseplan": "See courseplan",
+    "moreInfo": "More info",
+    "points": "Points",
+    "website": "Website",
+    "report": "Report"
+  },
+
+  "technologies": {
+    "title": "Technologies",
+    "intro": "",
+    "recentlyTitle": "Recently",
+    "recentlyText": "Here are some technologies i recently worked with:",
+    "allTitle": "All",
+    "allText": "More technologies i've worked with during my time as a developer:"
+  },
+
+  "work": {
+    "title": "Work",
+    "intro": "Where I’ve Worked and some references."
+  },
+
+  "metaTags": {
+    "description": "My experience with web development involving studies, different technologies and work",
+    "keywords": "Experience, University, Study, School, Technologies, Frameworks, Work"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "locales": ["sv", "en-US"],
+  "defaultLocale": "sv",
+  "pages": {
+    "*": ["common", "navigation", "meta", "responseMessages", "start", "about", "experience", "projects"]
+  }
+}

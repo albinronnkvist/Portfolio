@@ -1,0 +1,8 @@
+{
+  "error": "Error",
+  "meNotYou": "It's not you, it's me!",
+
+  "education": {
+    "getAllError": "Could not get the courses, try again later."
+  }
+}
