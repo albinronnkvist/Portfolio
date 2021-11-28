@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Disallow: /admin/*
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.albinronnkvist.me
+
+# Sitemaps
+Sitemap: https://www.albinronnkvist.me/sitemap.xml

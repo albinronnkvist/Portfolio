@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
 export const siteTitle = "Albin Rönnkvist"
-export const mainUrl = "https://albinronnkvist.se"
+export const mainUrl = "https://www.albinronnkvist.me"
 
 export default function Meta({title, keywords, description, type, url, image}) {
   const route = useRouter()
