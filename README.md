@@ -3,7 +3,7 @@
 ## Setup
 
 ### Standard
-- Pull repo: _git pull https://github.com/albinronnkvist/portfolio_
+- Pull repo: _git clone https://github.com/albinronnkvist/portfolio_
 - Install packages: _npm i_
 
 ### Firebase
