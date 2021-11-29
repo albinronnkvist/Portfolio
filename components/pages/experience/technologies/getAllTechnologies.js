@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import FadeInWhenVisibleCardNoHover from '../../../components/animations/fadeInWhenVisibleCardNoHover'
+import FadeInWhenVisibleCardNoHover from '../../../animations/fadeInWhenVisibleCardNoHover'
 import { useRouter } from 'next/router'
+import React from "react"
 
 export default function GetAllTechnologies({technologies, categories}) {
   const { locale } = useRouter()
@@ -38,7 +39,7 @@ export default function GetAllTechnologies({technologies, categories}) {
     <FadeInWhenVisibleCardNoHover>
       <div className="rounded flex flex-col shadow-xl dark:bg-gray-light w-full xl:w-5/6 mt-2">
         {allCategories.map(category => (
-          <>
+          <React.Fragment key={category.title}>
             <button 
               onClick={() => {changeCategory(category.title)}}
               className={`${category.title === currentCategory ? 'dark:bg-gray-light dark:text-white bg-gray-light3 text-black-dark' : 'dark:text-primary-default text-primary-dark'} dark:hover:bg-primary-default dark:hover:text-black-dark hover:bg-primary-dark hover:text-white px-5 py-3 text-left transition-colors duration-200`}
@@ -88,7 +89,7 @@ export default function GetAllTechnologies({technologies, categories}) {
                 ))}
               </div>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </FadeInWhenVisibleCardNoHover>

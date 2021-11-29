@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
-import BasicCard from '../../components/cards/basicCard'
-import Loading from '../../components/other/loading'
+import EducationCard from './educationCard'
+import Loading from '../../../other/loading'
 import { motion } from 'framer-motion'
 
-export default function GetAllInterests({ interests }) {
+export default function GetAllCourses({ courses }) {
   let { t } = useTranslation()
 
   const breakpoints = (width) => {
@@ -31,45 +31,43 @@ export default function GetAllInterests({ interests }) {
     }
   }, [])
 
-  const [amount, setAmount] = useState(breakpoint)
+  const [courseAmount, setCourseAmount] = useState(breakpoint)
 
   useEffect(() => {
     if(breakpoint === "xs" || breakpoint === "sm") {
-      setAmount(3)
+      setCourseAmount(3)
     } else if (breakpoint === "md") {
-      setAmount(4)
+      setCourseAmount(4)
     } else if(breakpoint === "lg") {
-      setAmount(3)
+      setCourseAmount(6)
     }
   }, [breakpoint])
 
   const onSeeMore = () => {
-    if(amount >= interests.length) {
+    if(courseAmount >= courses.length) {
       if(breakpoint === "xs") {
-        setAmount(3)
+        setCourseAmount(3)
       } else if (breakpoint === "md") {
-        setAmount(4)
+        setCourseAmount(4)
       } else if(breakpoint === "lg") {
-        setAmount(3)
+        setCourseAmount(6)
       }
     } else {
       if(breakpoint === "xs" || breakpoint === "sm") {
-        setAmount(amount + 3)
+        setCourseAmount(courseAmount + 3)
       } else if (breakpoint === "md") {
-        setAmount(amount + 2)
+        setCourseAmount(courseAmount + 2)
       } else if(breakpoint === "lg") {
-        setAmount(amount + 3)
+        setCourseAmount(courseAmount + 3)
       }
     }
   }
 
   return (
     <>
-      {interests.length > 0 ? (
+      {courses.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-              <BasicCard interests={interests.slice(0, amount)} />
-            </div>
+            <EducationCard courses={courses.slice(0, courseAmount)} />
 
             <div className="flex flex-row justify-center items-center">
               <motion.button 
@@ -80,7 +78,7 @@ export default function GetAllInterests({ interests }) {
                 onClick={onSeeMore} 
                 className="readMore"
               >
-                {amount >= interests.length ? (
+                {courseAmount >= courses.length ? (
                     <>
                       {t("common:showLess")}
                     </>

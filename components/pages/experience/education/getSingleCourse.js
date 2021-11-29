@@ -1,5 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
-import Loading from "../../../components/other/loading";
+import Loading from "../../../other/loading";
 import { useRouter } from 'next/router';
 
 export default function GetSingleCourse({course}) {
@@ -45,7 +45,7 @@ export default function GetSingleCourse({course}) {
                   target="_blank"
                   className="text-base sm:text-sm md:text-sm xl:text-base 2xl:text-lg"
                 >
-                  {t("experience:education.seeCourseplan")} <i class="bi bi-box-arrow-up-right" aria-label="Link" />
+                  {t("experience:education.seeCourseplan")} <i className="bi bi-box-arrow-up-right" aria-label="Link" />
                 </a>
                 <div>
                   <h2 className="mt-12 mb-2">

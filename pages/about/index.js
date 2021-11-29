@@ -5,7 +5,7 @@ import { db } from '../../firebase/initFirebase'
 import { collection, getDocs, query, orderBy } from '@firebase/firestore'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import GetAllInterests from '../../firebase/about/getAllInterests'
+import GetAllInterests from '../../components/pages/about/getAllInterests'
 
 export default function About({interests}) {
   let { t } = useTranslation()

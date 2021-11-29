@@ -41,10 +41,10 @@ module.exports = {
       keyframes: theme => ({
         fadeIn: {
           '0%': { width: 0 },
-          '100%': { width: '66%' },
+          '100%': { width: '75%' },
         },
         fadeOut: {
-          '0%': { width: '66%' },
+          '0%': { width: '75%' },
           '100%': { width: 0 },
         },
         opacityFadeIn: {

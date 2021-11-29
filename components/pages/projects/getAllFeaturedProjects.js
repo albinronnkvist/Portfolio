@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
-import Loading from '../../components/other/loading'
-import ProjectCardFeatured from '../../components/cards/projectCardFeatured'
+import Loading from '../../other/loading'
+import ProjectCardFeatured from './projectCardFeatured'
 
 export default function GetAllFeaturedProjects({ projects }) {
   let { t } = useTranslation()

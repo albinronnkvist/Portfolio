@@ -2,9 +2,9 @@ import useTranslation from 'next-translate/useTranslation'
 import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import useInView from 'react-cool-inview'
-import Loading from '../../other/loading'
+import Loading from '../../../other/loading'
 
-const GetAllCourses = dynamic(() => import('../../../firebase/experience/education/getAllCourses'))
+const GetAllCourses = dynamic(() => import('./getAllCourses'))
 
 export default function Education({courses}) {
   const { t } = useTranslation()

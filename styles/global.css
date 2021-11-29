@@ -129,10 +129,6 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .discs::before {
   content: "\2022";
   color: #34D399;

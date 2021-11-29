@@ -1,7 +1,6 @@
-import FadeInWhenVisibleCard from '../animations/fadeInWhenVisibleCard'
+import FadeInWhenVisibleCard from '../../animations/fadeInWhenVisibleCard'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
 
 export default function ProjectCard({ projects }) {
   const { locale } = useRouter()

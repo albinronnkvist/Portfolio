@@ -1,6 +1,6 @@
-import FadeInWhenVisibleCardNoHover from '../../components/animations/fadeInWhenVisibleCardNoHover'
+import FadeInWhenVisibleCardNoHover from '../../animations/fadeInWhenVisibleCardNoHover'
 import { useRouter } from 'next/router'
-import StarterSubImage from '../../components/animations/starterSubImage'
+import StarterSubImage from '../../animations/starterSubImage'
 import useTranslation from 'next-translate/useTranslation'
 
 export default function GetSingleProject({ project }) {

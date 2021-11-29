@@ -8,8 +8,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-export default function Experience() {
-  const { t } = useTranslation()
+export default function Projects() {
+  let { t } = useTranslation()
 
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -21,16 +21,27 @@ export default function Experience() {
   }, [controls, inView]);
 
   return (
-    <section id="experience" className="w-full mt-24 lg:mt-48 flex flex-row justify-end">
-      <div className="flex flex-col-reverse md:flex-row justify-end gap-8 xl:gap-12 lg:w-5/6">
+    <section id="about" className="w-full mt-48 lg:mt-48 mb-12">
+      <div className="flex flex-col md:flex-row gap-8 xl:gap-12 mt-12 justify-end w-full lg:w-5/6">
+        <div className="w-full lg:w-4/6">
+          <StarterSubImage>
+            <Image 
+              src="/images/projects.svg" 
+              width={400}
+              height={400}
+              layout="responsive"
+              alt="A guy trying to find a folder"
+            />
+          </StarterSubImage>
+        </div>
         <div className="w-full">
           <StarterSubTitle>
-            {t("experience:title")}
+            {t("projects:title")}
           </StarterSubTitle>
           <StarterSubText>
-            {t("experience:intro")}
+            {t("projects:intro")}
           </StarterSubText>
-          <Link href="/experience" scroll={false}>
+          <Link href="/projects" scroll={false}>
             <motion.button 
               whileTap={{ scale: 0.9 }} 
               whileHover={{ boxShadow: "0px 0px 12px rgb(52, 211, 153)" }} 
@@ -57,18 +68,8 @@ export default function Experience() {
             </motion.button>
           </Link>
         </div>
-        <div className="w-full lg:w-4/6">
-          <StarterSubImage>
-            <Image 
-              src="/images/experience.svg" 
-              width={400}
-              height={400}
-              layout="responsive"
-              alt="A guy reading a book"
-            />
-          </StarterSubImage>
-        </div>
       </div>
-    </section>
+    </section>  
   )
 }
+

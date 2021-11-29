@@ -1,4 +1,4 @@
-import FadeInWhenVisibleCardNoHover from '../../../components/animations/fadeInWhenVisibleCardNoHover'
+import FadeInWhenVisibleCardNoHover from '../../../animations/fadeInWhenVisibleCardNoHover'
 
 export default function GetRecentTechnologies({technologies}) {
   return (

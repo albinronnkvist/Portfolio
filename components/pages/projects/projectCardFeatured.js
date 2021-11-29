@@ -1,7 +1,7 @@
-import FadeInWhenVisibleCardNoHover from '../animations/fadeInWhenVisibleCardNoHover'
+import FadeInWhenVisibleCardNoHover from '../../animations/fadeInWhenVisibleCardNoHover'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import StarterSubImage from '../animations/starterSubImage'
+import StarterSubImage from '../../animations/starterSubImage'
 import useTranslation from 'next-translate/useTranslation'
 
 export default function ProjectCardFeatured({ projects }) {

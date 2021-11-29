@@ -3,7 +3,7 @@ import Breadcrumbs from "../../../components/sections/breadcrumbs";
 import useTranslation from "next-translate/useTranslation";
 import { db } from "../../../firebase/initFirebase";
 import { doc, getDoc, collection, getDocs } from '@firebase/firestore'
-import GetSingleCourse from "../../../firebase/experience/education/getSingleCourse";
+import GetSingleCourse from "../../../components/pages/experience/education/getSingleCourse";
 import { useRouter } from "next/router";
 
 export default function Course({course}) {

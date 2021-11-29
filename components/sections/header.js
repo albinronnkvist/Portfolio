@@ -81,7 +81,7 @@ export default function Header(props) {
                           }}
                           whileFocus={{ scale: 1.1, textShadow: "0px 0px 12px rgb(52, 211, 153)" }} 
                           onClick={() => {toggleMenu(); toggleBlur(); }}
-                          className="text-left text-2xl md:text-base lg:text-base xl:text-lg ml-7 mt-5 md:mt-0 md:ml-4 md:mx-2 dark:text-primary-default text-white"
+                          className="text-left text-2xl md:text-base lg:text-base xl:text-lg ml-6 mt-6 mb-4 md:mb-0 md:mt-0 md:ml-4 md:mx-2 dark:text-primary-default text-white"
                         >
                           {link.title}
                         </motion.button>
@@ -90,17 +90,17 @@ export default function Header(props) {
                   })
                 }
               </div>
-              <div className="md:mr-4 flex flex-row md:justify-center md:items-center mt-5 md:mt-0">
+              <div className="md:mr-4 flex flex-row md:justify-center md:items-center mt-6 md:mt-0">
                 <motion.a 
                   whileTap={{ scale: 0.9 }} 
-                  className="border rounded text-left text-2xl md:text-base lg:text-base xl:text-lg font-mono px-4 py-2 ml-11 md:ml-0 md:mx-2 dark:text-primary-default text-white dark:hover:bg-primary-default dark:hover:border-primary-default dark:hover:text-black-dark hover:bg-white hover:text-primary-dark hover:border-white transition-colors duration-200 hover:shadow-xl"
+                  className="border rounded text-left text-2xl md:text-base lg:text-base xl:text-lg font-mono px-4 py-2 ml-10 md:ml-0 md:mx-2 dark:text-primary-default text-white dark:hover:bg-primary-default dark:hover:border-primary-default dark:hover:text-black-dark hover:bg-white hover:text-primary-dark hover:border-white transition-colors duration-200 hover:shadow-xl"
                   href="mailto:kontakt@albinronnkvist.se"
                   rel="noreferrer"
                 >
                   {t('navigation:menu.contact')}
                 </motion.a>
               </div>
-              <div className="flex flex-row mt-12 md:mt-auto ml-9 md:ml-auto">
+              <div className="flex flex-row mt-12 md:mt-auto ml-7 md:ml-auto">
                 <ChangeLanguage />
                 <ChangeTheme />
               </div>

@@ -1,4 +1,4 @@
-import FadeInWhenVisibleCard from '../animations/fadeInWhenVisibleCard'
+import FadeInWhenVisibleCard from '../../../animations/fadeInWhenVisibleCard'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 

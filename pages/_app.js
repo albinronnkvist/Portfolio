@@ -27,11 +27,11 @@ export default function App({ Component, pageProps, router }) {
   }
 
   useEffect(() => {
-    router.events.on('routeChangeComplete', onTop);
+    route.events.on('routeChangeComplete', onTop);
     return () => {
-      router.events.off('routeChangeComplete', onTop);
+      route.events.off('routeChangeComplete', onTop);
     };
-  }, [router.events]);
+  }, [route.events]);
 
   return (
     <>

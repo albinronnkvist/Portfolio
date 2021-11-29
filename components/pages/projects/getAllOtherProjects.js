@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
-import EducationCard from '../../../components/cards/educationCard'
-import Loading from '../../../components/other/loading'
+import Loading from '../../other/loading'
+import ProjectCard from './projectCard'
 import { motion } from 'framer-motion'
 
-export default function GetAllCourses({ courses }) {
+export default function GetAllOtherProjects({ projects }) {
   let { t } = useTranslation()
 
   const breakpoints = (width) => {
@@ -17,7 +17,7 @@ export default function GetAllCourses({ courses }) {
     } else if(width >= 1024) {
       return 'lg';
     }
-  };
+  }
   
   const [breakpoint, setBreakpoint] = useState(() => breakpoints(typeof window !== 'undefined' && (window.innerWidth)));
 
@@ -31,43 +31,43 @@ export default function GetAllCourses({ courses }) {
     }
   }, [])
 
-  const [courseAmount, setCourseAmount] = useState(breakpoint)
+  const [projectAmount, setProjectAmount] = useState(breakpoint)
 
   useEffect(() => {
     if(breakpoint === "xs" || breakpoint === "sm") {
-      setCourseAmount(3)
+      setProjectAmount(3)
     } else if (breakpoint === "md") {
-      setCourseAmount(4)
+      setProjectAmount(4)
     } else if(breakpoint === "lg") {
-      setCourseAmount(6)
+      setProjectAmount(6)
     }
   }, [breakpoint])
 
   const onSeeMore = () => {
-    if(courseAmount >= courses.length) {
+    if(projectAmount >= projects.length) {
       if(breakpoint === "xs") {
-        setCourseAmount(3)
+        setProjectAmount(3)
       } else if (breakpoint === "md") {
-        setCourseAmount(4)
+        setProjectAmount(4)
       } else if(breakpoint === "lg") {
-        setCourseAmount(6)
+        setProjectAmount(6)
       }
     } else {
       if(breakpoint === "xs" || breakpoint === "sm") {
-        setCourseAmount(courseAmount + 3)
+        setProjectAmount(projectAmount + 3)
       } else if (breakpoint === "md") {
-        setCourseAmount(courseAmount + 2)
+        setProjectAmount(projectAmount + 2)
       } else if(breakpoint === "lg") {
-        setCourseAmount(courseAmount + 3)
+        setProjectAmount(projectAmount + 3)
       }
     }
   }
 
   return (
     <>
-      {courses.length > 0 ? (
+      {projects.length > 0 ? (
           <>
-            <EducationCard courses={courses.slice(0, courseAmount)} />
+            <ProjectCard projects={projects.slice(0, projectAmount)} />
 
             <div className="flex flex-row justify-center items-center">
               <motion.button 
@@ -78,7 +78,7 @@ export default function GetAllCourses({ courses }) {
                 onClick={onSeeMore} 
                 className="readMore"
               >
-                {courseAmount >= courses.length ? (
+                {projectAmount >= projects.length ? (
                     <>
                       {t("common:showLess")}
                     </>

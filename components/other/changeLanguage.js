@@ -12,31 +12,24 @@ export default function changeLanguage() {
       <img 
         src={props.data.icon}
         alt={props.data.label}
-        className="w-16 md:12"
       />
     </Option>
   )
 
   const CustomSelectValue = props => (
-    <div>
+    <div className="absolute top-0 left-0 px-2 md:px-2">
       <img 
         src={props.data.icon} 
         alt={props.data.label}
-        className="w-16 md:w-10 mb-2"
       />
     </div>
   )
 
   const customStyles = {
-    input: (provided) => ({
-      ...provided,
-      height: '0px',
-      color: 'transparent'
-    }),
-
     control: (provided) => ({
       ...provided,
-      paddingLeft: '5px',
+      position: 'relative',
+      width: '3rem',
       backgroundColor: 'transparent',
       border: 'none',
       "&:hover": {
@@ -47,7 +40,6 @@ export default function changeLanguage() {
 
     option: (provided) => ({
       ...provided,
-      marginTop: '0',
       backgroundColor: '#0e0f0f',
       "&:hover": {
         backgroundColor: '#34D399',
@@ -57,7 +49,6 @@ export default function changeLanguage() {
 
     menu: (provided) => ({
       ...provided,
-      marginTop: '0',
       backgroundColor: '#0e0f0f'
     })
   }
@@ -77,6 +68,7 @@ export default function changeLanguage() {
       whileHover={{ scale: 1.1 }} 
       whileFocus={{ scale: 1.1 }} 
       whileTap={{ scale: 0.9 }}
+      className="ml-2 md:ml-0"
     >
       <Select 
         className="react-select" 
@@ -88,14 +80,15 @@ export default function changeLanguage() {
             "sv"
           )
         }
+        inputProps={{readOnly:true}}
+        isSearchable={ false }
         onChange={changeLanguage}
         options={options}
         components={{ 
-          
           IndicatorSeparator: () => null, 
           DropdownIndicator:() => null,
           Option: CustomSelectOption, 
-          SingleValue: CustomSelectValue
+          SingleValue: CustomSelectValue,
         }}
         styles={customStyles}
       />

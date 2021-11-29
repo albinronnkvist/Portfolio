@@ -1,11 +1,10 @@
 import useTranslation from 'next-translate/useTranslation'
-import { motion } from 'framer-motion'
-import GetRecentTechnologies from '../../../firebase/experience/technologies/getRecentTechnologies'
+import GetRecentTechnologies from '../../../../components/pages/experience/technologies/getRecentTechnologies'
 import dynamic from 'next/dynamic'
 import useInView from 'react-cool-inview'
-import Loading from '../../other/loading'
+import Loading from '../../../other/loading'
 
-const GetAllTechnologies = dynamic(() => import('../../../firebase/experience/technologies/getAllTechnologies'))
+const GetAllTechnologies = dynamic(() => import('../../../../components/pages/experience/technologies/getAllTechnologies'))
 
 export default function Education({technologies, categories}) {
   const { t } = useTranslation()

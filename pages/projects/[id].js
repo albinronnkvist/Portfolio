@@ -3,7 +3,7 @@ import Breadcrumbs from "../../components/sections/breadcrumbs";
 import useTranslation from "next-translate/useTranslation";
 import { db } from "../../firebase/initFirebase";
 import { doc, getDoc, collection, getDocs } from '@firebase/firestore'
-import GetSingleProject from "../../firebase/projects/getSingleProject";
+import GetSingleProject from "../../components/pages/projects/getSingleProject";
 import { useRouter } from "next/router";
 
 export default function Project({project}) {

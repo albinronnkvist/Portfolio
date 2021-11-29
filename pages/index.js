@@ -1,8 +1,8 @@
 import useTranslation from 'next-translate/useTranslation'
 import { motion } from 'framer-motion'
-import About from '../components/sections/startPage/about'
-import Experience from '../components/sections/startPage/experience'
-import Projects from '../components/sections/startPage/projects'
+import About from '../components/pages/start/about'
+import Experience from '../components/pages/start/experience'
+import Projects from '../components/pages/start/projects'
 import Link from 'next/link'
 import StarterImage from '../components/animations/starterImage'
 import LandingImage from '../components/customImages/landingImage'
@@ -25,7 +25,7 @@ export default function Home() {
     <>
       <section id="start" className="min-h-screen">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-4 md:mt-12">
-          <div className="w-full mb-6 md:mb-0">
+          <div className="w-full mb-6 md:mb-0" >
             <motion.p initial="hidden" animate="visible" 
               variants={{
                 hidden: {

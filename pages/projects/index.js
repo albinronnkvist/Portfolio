@@ -8,8 +8,8 @@ import { collection, getDocs, query, orderBy } from '@firebase/firestore'
 import Meta from '../../components/other/meta'
 import Loading from '../../components/other/loading'
 
-const GetAllFeaturedProjects = dynamic(() => import('../../firebase/projects/getAllFeaturedProjects'))
-const GetAllOtherProjects = dynamic(() => import('../../firebase/projects/getAllOtherProjects'))
+const GetAllFeaturedProjects = dynamic(() => import('../../components/pages/projects/getAllFeaturedProjects'))
+const GetAllOtherProjects = dynamic(() => import('../../components/pages/projects/getAllOtherProjects'))
 
 export default function Projects({projects}) {
   const { t } = useTranslation()

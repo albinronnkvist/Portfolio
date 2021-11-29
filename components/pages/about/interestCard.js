@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
-import FadeInWhenVisibleCardWithPadding from '../../components/animations/fadeInWhenVisibleCardWithPadding'
+import FadeInWhenVisibleCardWithPadding from '../../animations/fadeInWhenVisibleCardWithPadding'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-export default function BasicCard({ interests }) {
+export default function InterestCard({ interests }) {
   const { locale } = useRouter()
 
   return (

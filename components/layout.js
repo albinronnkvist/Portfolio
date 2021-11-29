@@ -6,7 +6,7 @@ export default function Layout({ children, home }) {
   const [blurred, setBlurred] = useState(false)
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black-dark overflow-hidden relative">
+    <div className="bg-white dark:bg-black-dark overflow-hidden relative">
       <header>
         <Header toggleBlur={blurred => setBlurred(blurred)} />
       </header>

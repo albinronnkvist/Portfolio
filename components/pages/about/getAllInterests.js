@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
-import Loading from '../../components/other/loading'
-import ProjectCard from '../../components/cards/projectCard'
+import InterestCard from './interestCard'
+import Loading from '../../other/loading'
 import { motion } from 'framer-motion'
 
-export default function GetAllOtherProjects({ projects }) {
+export default function GetAllInterests({ interests }) {
   let { t } = useTranslation()
 
   const breakpoints = (width) => {
@@ -17,7 +17,7 @@ export default function GetAllOtherProjects({ projects }) {
     } else if(width >= 1024) {
       return 'lg';
     }
-  }
+  };
   
   const [breakpoint, setBreakpoint] = useState(() => breakpoints(typeof window !== 'undefined' && (window.innerWidth)));
 
@@ -31,43 +31,45 @@ export default function GetAllOtherProjects({ projects }) {
     }
   }, [])
 
-  const [projectAmount, setProjectAmount] = useState(breakpoint)
+  const [amount, setAmount] = useState(breakpoint)
 
   useEffect(() => {
     if(breakpoint === "xs" || breakpoint === "sm") {
-      setProjectAmount(3)
+      setAmount(3)
     } else if (breakpoint === "md") {
-      setProjectAmount(4)
+      setAmount(4)
     } else if(breakpoint === "lg") {
-      setProjectAmount(6)
+      setAmount(3)
     }
   }, [breakpoint])
 
   const onSeeMore = () => {
-    if(projectAmount >= projects.length) {
+    if(amount >= interests.length) {
       if(breakpoint === "xs") {
-        setProjectAmount(3)
+        setAmount(3)
       } else if (breakpoint === "md") {
-        setProjectAmount(4)
+        setAmount(4)
       } else if(breakpoint === "lg") {
-        setProjectAmount(6)
+        setAmount(3)
       }
     } else {
       if(breakpoint === "xs" || breakpoint === "sm") {
-        setProjectAmount(projectAmount + 3)
+        setAmount(amount + 3)
       } else if (breakpoint === "md") {
-        setProjectAmount(projectAmount + 2)
+        setAmount(amount + 2)
       } else if(breakpoint === "lg") {
-        setProjectAmount(projectAmount + 3)
+        setAmount(amount + 3)
       }
     }
   }
 
   return (
     <>
-      {projects.length > 0 ? (
+      {interests.length > 0 ? (
           <>
-            <ProjectCard projects={projects.slice(0, projectAmount)} />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+              <InterestCard interests={interests.slice(0, amount)} />
+            </div>
 
             <div className="flex flex-row justify-center items-center">
               <motion.button 
@@ -78,7 +80,7 @@ export default function GetAllOtherProjects({ projects }) {
                 onClick={onSeeMore} 
                 className="readMore"
               >
-                {projectAmount >= projects.length ? (
+                {amount >= interests.length ? (
                     <>
                       {t("common:showLess")}
                     </>
