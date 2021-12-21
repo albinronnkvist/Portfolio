@@ -8,6 +8,7 @@ import AdminEditTechnologyCategory from '../../../../../firebase/experience/tech
 
 export default function AdminEditCategory({ category }) {
   const { t } = useTranslation()
+  const { locale } = useRouter()
 
   const crumbs = [
     {
