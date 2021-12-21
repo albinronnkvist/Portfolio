@@ -77,7 +77,7 @@ export default function GetAllTechnologies({technologies, categories}) {
                               }
                             }
                           }} 
-                          className="flex flex-col mb-4 ml-5 transition-colors duration-300"
+                          className="flex flex-col mb-4 ml-5 transition-colors duration-300 text-xs sm:text-sm md:text-sm xl:text-base 2xl:text-lg"
                         >
                           <div>
                             {technology.title}

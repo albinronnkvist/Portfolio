@@ -53,7 +53,7 @@ export default function Experience() {
               }} 
               className="mt-6 readMoreFilled"
             >
-              {t("common:readMore")} 👉
+              {t("common:readMore")}
             </motion.button>
           </Link>
         </div>

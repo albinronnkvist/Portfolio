@@ -141,7 +141,7 @@ export default function Home() {
                 }} 
                 className="mt-6 readMoreFilled"
               >
-                {t("common:readMore")} 👇
+                {t("common:readMore")}
               </motion.button>
             </Link>
           </div>
