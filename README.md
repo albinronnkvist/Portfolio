@@ -3,11 +3,12 @@
 ## Setup
 
 ### Standard
-- Pull repo: _git clone https://github.com/albinronnkvist/portfolio_
+- Clone repo: _git clone https://github.com/albinronnkvist/portfolio_
 - Install packages: _npm i_
+- Run: _npm run dev_
 
 ### Firebase
-Add a .env.local-file with your Firebase-config in the root folder and add the following environment variables:
+Add a _.env.local_-file with your Firebase-config in the root folder and add the following environment variables:
 - _NEXT_PUBLIC_FIREBASE_API_KEY=[your api key]_
 - _NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=[your auth domain]_
 - _NEXT_PUBLIC_FIREBASE_DATABASE_URL=[your database url]_
