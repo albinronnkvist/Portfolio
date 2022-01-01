@@ -3,9 +3,8 @@ import { motion } from 'framer-motion'
 import About from '../components/pages/start/about'
 import Experience from '../components/pages/start/experience'
 import Projects from '../components/pages/start/projects'
-import Link from 'next/link'
 import StarterImage from '../components/animations/starterImage'
-import LandingImage from '../components/customImages/landingImage'
+import { Link, animateScroll as scroll } from "react-scroll"
 
 export default function Home() {
   let { t } = useTranslation()
@@ -119,7 +118,13 @@ export default function Home() {
               }} className="mt-0 md:w-5/6">
               {t("start:intro2")}
             </motion.p>
-            <Link href="#about">
+            <Link 
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               <motion.button 
                 whileTap={{ scale: 0.9 }} 
                 whileHover={{ 
