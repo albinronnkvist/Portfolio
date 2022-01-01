@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <section id="start" className="min-h-screen">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-4 md:mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4 md:mt-12">
           <div className="w-full mb-6 md:mb-0" >
             <motion.p initial="hidden" animate="visible" 
               variants={{
@@ -78,6 +78,13 @@ export default function Home() {
               }} className="text-primary-dark dark:text-primary-default text-2xl md:text-2xl xl:text-3xl">
               {t("start:webDev")}
             </motion.h2>
+            
+            <img 
+              src="/images/profile.png" 
+              alt="Profile picture of me" 
+              className="block lg:hidden w-2/3 md:w-1/2 rounded bg-primary-dark overflow-hidden mt-10" 
+            />
+
             <motion.p initial="hidden" animate="visible" 
               variants={{
                 hidden: {
@@ -92,7 +99,7 @@ export default function Home() {
                     duration: .3
                   }
                 }
-              }} className="mt-10">
+              }} className="mt-4 md:w-5/6">
               {getAge()}{t("start:intro1")}
             </motion.p>
             <motion.p initial="hidden" animate="visible" 
@@ -109,7 +116,7 @@ export default function Home() {
                     duration: .3
                   }
                 }
-              }} className="mt-0">
+              }} className="mt-0 md:w-5/6">
               {t("start:intro2")}
             </motion.p>
             <Link href="#about">
@@ -146,7 +153,14 @@ export default function Home() {
             </Link>
           </div>
           <StarterImage>
-            <LandingImage />
+            <div className='w-full h-full hidden lg:block'>
+              <div 
+                className="relative z-0 bg-center bg-no-repeat h-full rounded" 
+                style={{backgroundImage: `url(/images/profile.png)`}}
+              >
+                <div className="absolute bottom-0 left-0 z-20 w-full h-48 bg-gradient-to-t dark:from-black-dark from-white"></div>
+              </div>
+            </div>
           </StarterImage>
         </div>
       </section>

@@ -35,7 +35,7 @@ export default function About({interests}) {
           <div className="h-auto sm:h-64 w-full sm:w-64">
             <img 
               src="/images/profile.png" 
-              alt="Profile picture of a guy" 
+              alt="Profile picture of me" 
               className="h-full w-full rounded bg-primary-dark overflow-hidden shadow-xl" 
             />
           </div>
