@@ -1,4 +1,5 @@
 # Portfolio website
+By: Albin Rönnkvist
 
 ## Setup
 
