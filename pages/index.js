@@ -23,8 +23,8 @@ export default function Home() {
   return (
     <>
       <section id="start" className="min-h-screen">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4 md:mt-12">
-          <div className="w-full mb-6 md:mb-0" >
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-0 mt-4 md:mt-12">
+          <div className="w-full mb-6 md:mb-0 col-span-1 lg:col-span-2">
             <motion.p initial="hidden" animate="visible" 
               variants={{
                 hidden: {
@@ -158,12 +158,11 @@ export default function Home() {
             </Link>
           </div>
           <StarterImage>
-            <div className='w-full h-full hidden lg:block'>
+            <div className='w-full h-full hidden lg:block col-span-1 lg:col-span-1'>
               <div 
-                className="relative z-0 bg-center bg-no-repeat h-full rounded" 
+                className="relative z-0 bg-bottom bg-no-repeat bg-contain h-full rounded bg-primary-dark" 
                 style={{backgroundImage: `url(/images/profile.png)`}}
               >
-                <div className="absolute bottom-0 left-0 z-20 w-full h-48 bg-gradient-to-t dark:from-black-dark from-white"></div>
               </div>
             </div>
           </StarterImage>
