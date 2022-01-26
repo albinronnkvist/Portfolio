@@ -2,11 +2,12 @@ import useTranslation from 'next-translate/useTranslation'
 import Breadcrumbs from '../../components/sections/breadcrumbs'
 import Education from '../../components/pages/experience/education/education'
 import Technologies from '../../components/pages/experience/technologies/technologies'
+import Work from '../../components/pages/experience/work/work'
 import { db } from '../../firebase/initFirebase'
 import { collection, getDocs, query, orderBy } from '@firebase/firestore'
 import Meta from '../../components/other/meta'
 
-export default function Experience({courses, technologies, categories}) {
+export default function Experience({courses, technologies, categories, jobs}) {
   const { t } = useTranslation()
 
   const crumbs = [
@@ -30,6 +31,7 @@ export default function Experience({courses, technologies, categories}) {
 
         <Education courses={courses} />
         <Technologies technologies={technologies} categories={categories} />
+        <Work jobs={jobs} />
       </section>
     </>
   )
@@ -48,7 +50,11 @@ export const getStaticProps = async () => {
   const data3 = await getDocs(q3)
   const categories = data3.docs.map((doc) => ({...doc.data(), id: doc.id}))
 
+  const q4 = query(collection(db, "jobs"), orderBy("order", "asc"))
+  const data4 = await getDocs(q4)
+  const jobs = data4.docs.map((doc) => ({...doc.data(), id: doc.id}))
+
   return {
-    props: {courses, technologies, categories}
+    props: {courses, technologies, categories, jobs}
   }
 }
