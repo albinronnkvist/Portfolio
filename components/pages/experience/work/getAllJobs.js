@@ -71,15 +71,16 @@ export default function GetAllTechnologies({jobs}) {
                           className="flex flex-col mb-4 ml-5 transition-colors duration-300 text-xs sm:text-sm md:text-sm xl:text-base 2xl:text-lg"
                         >
                           <div className="mb-2">
-                            <h3>{job.title}</h3>
+                            <h3>{locale === "sv" ? job.title : job.titleEn}</h3>
                           </div>
-
-                          <div>
-                            <i className="bi bi-building" />&nbsp;
-                            <a href={job.companyWebsite} target="_blank" rel="noreferrer" aria-label="website">
-                              {job.company} <i className="bi bi-box-arrow-up-right" />
-                            </a>
-                          </div>   
+                          {job.companyWebsite && (
+                            <div>
+                              <i className="bi bi-building" />&nbsp;
+                              <a href={job.companyWebsite} target="_blank" rel="noreferrer" aria-label="website">
+                                {job.company} <i className="bi bi-box-arrow-up-right" />
+                              </a>
+                            </div>   
+                          )}
                           <div className="mt-2">
                             <i className="bi bi-clock" />&nbsp; 
                             {locale === "sv" ? job.date : job.dateEn}
@@ -96,18 +97,27 @@ export default function GetAllTechnologies({jobs}) {
                           </div> 
 
                           <hr/>  
+                          
+                          {job.referenceText && (
+                              <div className="mt-4 italic">
+                                "{locale === "sv" ? job.referenceText : job.referenceTextEn}"
+                              </div>    
+                            )
+                          }
 
-                          <div className="mt-4 italic">
-                            "{locale === "sv" ? job.referenceText : job.referenceTextEn}"
-                          </div>    
-                          <div className="mt-4">
-                            <i class="bi bi-person-circle"></i>&nbsp;
-                            {job.referenceName}
-                          </div>  
-                          <div className="mt-2">
-                            <i className="bi bi-envelope"></i>&nbsp;
-                            <a href={`mailto:${job.referenceEmail}`} target="_blank" rel="noreferrer" aria-label="Email">{job.referenceEmail}</a>
-                          </div>            
+                          {job.referenceName && (
+                            <div className="mt-4">
+                              <i class="bi bi-person-circle"></i>&nbsp;
+                              {job.referenceName}
+                            </div>  
+                          )}
+
+                          {job.referenceEmail && (
+                            <div className="mt-2">
+                              <i className="bi bi-envelope"></i>&nbsp;
+                              <a href={`mailto:${job.referenceEmail}`} target="_blank" rel="noreferrer" aria-label="Email">{job.referenceEmail}</a>
+                            </div>
+                          )}            
                         </motion.div>
                       )}
                     </div>
