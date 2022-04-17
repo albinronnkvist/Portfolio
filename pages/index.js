@@ -78,12 +78,6 @@ export default function Home() {
               {t("start:webDev")}
             </motion.h2>
             
-            <img 
-              src="/images/profile.png" 
-              alt="Profile picture of me" 
-              className="block lg:hidden w-2/3 md:w-1/2 rounded bg-primary-dark overflow-hidden mt-10" 
-            />
-
             <motion.p initial="hidden" animate="visible" 
               variants={{
                 hidden: {
@@ -157,15 +151,6 @@ export default function Home() {
               </motion.button>
             </Link>
           </div>
-          <StarterImage>
-            <div className='w-full h-full hidden lg:block col-span-1 lg:col-span-1'>
-              <div 
-                className="relative z-0 bg-bottom bg-no-repeat bg-contain h-full rounded bg-primary-dark" 
-                style={{backgroundImage: `url(/images/profile.png)`}}
-              >
-              </div>
-            </div>
-          </StarterImage>
         </div>
       </section>
       <About />
