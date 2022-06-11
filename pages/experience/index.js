@@ -42,7 +42,7 @@ export const getStaticProps = async () => {
   const data = await getDocs(q)
   const courses = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
 
-  const q2 = query(collection(db, "technologies"), orderBy("title", "desc"))
+  const q2 = query(collection(db, "technologies"), orderBy("title", "asc"))
   const data2 = await getDocs(q2)
   const technologies = data2.docs.map((doc) => ({...doc.data(), id: doc.id}))
 

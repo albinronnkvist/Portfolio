@@ -39,6 +39,7 @@ export default function GetSingleCourse({course}) {
                   <li>{t("experience:education.points")}: {course.points}</li>
                   <li>{t("experience:education.level")}: {course.level}</li>
                   <li>{t("experience:education.complete")}: {course.year}</li>
+                  <li>{t("experience:education.grade")}: {course.grade}</li>
                 </ul>
                 <a 
                   href={course.courseplan} 
@@ -47,40 +48,46 @@ export default function GetSingleCourse({course}) {
                 >
                   {t("experience:education.seeCourseplan")} <i className="bi bi-box-arrow-up-right" aria-label="Link" />
                 </a>
-                <div>
-                  <h2 className="mt-12 mb-2">
-                    {t("experience:education.project")}
-                  </h2>
-                  <div className="flex flex-row gap-6 text-3xl lg:text-xl xl:text-2xl">
-                    {course.repository && ( 
-                      <a 
-                        href={course.repository} 
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                          <i className="bi bi-github" aria-label="Github" />
-                      </a> 
-                    )}
-                    {course.website && (
-                      <a 
-                        href={course.website} 
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                          <i className="bi bi-box-arrow-up-right" aria-label="Link" />
-                      </a> 
-                    )}
-                    {course.report && (
-                      <a 
-                        href={course.report} 
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                          <i className="bi bi-file-earmark-pdf" aria-label="File" /> 
-                      </a> 
-                    )}
+                {course.repository === "" && course.website === "" && course.report === "" ? (
+                  <div>
+
                   </div>
-                </div>
+                ) : (
+                  <div>
+                    <h2 className="mt-12 mb-2">
+                      {t("experience:education.project")}
+                    </h2>
+                    <div className="flex flex-row gap-6 text-3xl lg:text-xl xl:text-2xl">
+                      {course.repository && ( 
+                        <a 
+                          href={course.repository} 
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                            <i className="bi bi-github" aria-label="Github" />
+                        </a> 
+                      )}
+                      {course.website && (
+                        <a 
+                          href={course.website} 
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                            <i className="bi bi-box-arrow-up-right" aria-label="Link" />
+                        </a> 
+                      )}
+                      {course.report && (
+                        <a 
+                          href={course.report} 
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                            <i className="bi bi-file-earmark-pdf" aria-label="File" /> 
+                        </a> 
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
