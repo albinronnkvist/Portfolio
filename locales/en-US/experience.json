@@ -1,10 +1,10 @@
 {
   "title": "Experience",
-  "intro": "At the moment I work as a system developer at Avarda. I also have a University Diploma(120 hp) in Computer Engineering and I program a lot in my spare time to learn more.",
+  "intro": "At the moment I work as a system developer at Avarda. I also have a University Diploma(120 hp) in Computer Engineering and I program a lot in my spare time for fun.",
 
   "education": {
     "title": "Education",
-    "intro": "I have a University Diploma(120 hp) in Computer Engineering. I studied at Mid Sweden University.",
+    "intro": "I have a University Diploma(120 hp) in Computer Engineering. I studied at Mid Sweden University, fully remote.",
     "myCourses": "My courses",
     "credits": "Higher education credits",
     "semester": "Semester",
@@ -25,9 +25,9 @@
     "title": "Technologies",
     "intro": "",
     "recentlyTitle": "Recently",
-    "recentlyText": "Here are some technologies i recently worked with:",
+    "recentlyText": "Here are some technologies I recently worked with:",
     "allTitle": "All",
-    "allText": "More technologies i've worked with during my time as a developer:"
+    "allText": "More technologies I've worked with during my time as a developer:"
   },
 
   "work": {
