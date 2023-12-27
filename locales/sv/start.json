@@ -1,6 +1,5 @@
 {
-  "hi": "Hej! Mitt namn är",
-  "webDev": "Jag är en systemutvecklare",
-  "intro1": "-åring med ett stort intresse för programmering!",
-  "intro2": "Jag arbetar som Systemutvecklare på Avarda och har Högskoleexamen med inriktning mot datateknik."  
+  "webDev": "Systemutvecklare",
+  "intro1": "-åring baserad i Norrköping, jag är huvudsakligen inriktad på Backend, men ägnar mig även åt lite Frontend då och då.",
+  "intro2": "Jag har en högskoleexamen med inriktning på datateknik från Mittuniversitetet och tillämpar för närvarande mina skills som Backend-utvecklare på Tradera."  
 }

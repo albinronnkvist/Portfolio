@@ -1,6 +1,5 @@
 {
-  "hi": "Hi! My name is",
-  "webDev": "I'm a web developer",
-  "intro1": "-year-old who is passionate about programming!",
-  "intro2": "I'm employed as a System Developer at Avarda and I hold a Higher Education Diploma specializing in Computer Engineering." 
+  "webDev": "Software Engineer",
+  "intro1": "-year-old based in Norrköping, diving deep into Backend while occasionally poking my nose into Frontend.",
+  "intro2": "I hold a Higher Education Diploma specializing in Computer Engineering at Mid Sweden University and I'm currently applying my skills as a Backend developer at Tradera." 
 }

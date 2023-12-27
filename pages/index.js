@@ -25,23 +25,6 @@ export default function Home() {
       <section id="start" className="min-h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-0 mt-4 md:mt-12">
           <div className="w-full mb-6 md:mb-0 col-span-1 lg:col-span-2">
-            <motion.p initial="hidden" animate="visible" 
-              variants={{
-                hidden: {
-                  scale: .8,
-                  opacity: 0
-                },
-                visible: {
-                  scale: 1,
-                  opacity: 1,
-                  transition: {
-                    delay: .6,
-                    duration: .3
-                  }
-                }
-              }} className="italic">
-              {t("start:hi")}
-            </motion.p>
             <motion.h1 initial="hidden" animate="visible" 
               variants={{
                 hidden: {

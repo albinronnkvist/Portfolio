@@ -1,9 +1,9 @@
 {
   "title": "About",
   "intro": "Get to know me better and read about why I chose to invest my time in programming.",
-  "text": "The first time I was introduced to system development was during a course in high school. I got hooked on the subject right away and could sit for hours and code without thinking about the time.",
-  "text2": "Programming was for a long time one of my biggest hobby before I chose to start studying the subject at university and finally work with it full time.",
-  "text3": "When I am not programming, I spend time with family, friends and my girlfriend. I also do a lot of activities when I have time left over.",
+  "text": "I was first exposed to programming during a high school course, and I immediately became captivated by the topic. I could easily lose track of time while coding for hours on end.",
+  "text2": "My curiosity for programming has remained unchanged as I decided to pursue it as my field of study at university and eventually transition into a full-time career.",
+  "text3": "When I am not programming, I spend time with my family, friends and girlfriend. I also like doing various activities such as sports, music, and video games.",
 
   "interests": "Interests",
 
@@ -12,3 +12,4 @@
     "keywords": "About, Interests, Web development"
   }
 }
+

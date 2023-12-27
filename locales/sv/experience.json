@@ -1,6 +1,6 @@
 {
   "title": "Erfarenhet",
-  "intro": "För tillfället arbetar jag som Systemutvecklare på Avarda. Jag har även Högskoleexamen med inriktning mot Datateknik och programmerar mycket på fritiden för skojs skull!",
+  "intro": "Jag har en högskoleexamen med inriktning på datateknik från Mittuniversitetet. För närvarande är jag anställd på Tradera, där jag fortsätter att utforska och utvecklas inom teknikområdet.",
 
   "education": {
     "title": "Utbildning",
@@ -25,14 +25,14 @@
     "title": "Teknologier",
     "intro": "",
     "recentlyTitle": "Nyligen",
-    "recentlyText": "Här är några tekniker som jag nyligen jobbat med:",
+    "recentlyText": "Några tekniker jag nyligen arbetat med:",
     "allTitle": "Alla",
-    "allText": "Fler teknologier som jag jobbat med under min tid som utvecklare:"
+    "allText": "Fler tekniker jag har erfarenhet av:"
   },
 
   "work": {
     "title": "Arbete",
-    "intro": "Tidigare arbetsplatser och referenser."
+    "intro": "Tidigare arbetsplatser."
   },
 
   "metaTags": {

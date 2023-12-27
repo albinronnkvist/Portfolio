@@ -1,6 +1,6 @@
 {
   "title": "Experience",
-  "intro": "Currently I am employed as a system developer at Avarda. In addition, I hold a University Diploma (120 hp) in Computer Engineering, and I love programming in my free time just for fun!",
+  "intro": "I hold a Higher Education Diploma specializing in Computer Engineering at Mid Sweden University. Currently, I'm employed at Tradera, where I continue to explore and grow in the tech field.",
 
   "education": {
     "title": "Education",
@@ -25,14 +25,14 @@
     "title": "Technologies",
     "intro": "",
     "recentlyTitle": "Recently",
-    "recentlyText": "Here are some technologies I recently worked with:",
+    "recentlyText": "Technologies I've recently engaged with:",
     "allTitle": "All",
-    "allText": "More technologies I've worked with during my time as a developer:"
+    "allText": "Additional technologies I have experience with:"
   },
 
   "work": {
     "title": "Work",
-    "intro": "Previous workplaces and references."
+    "intro": "My professional background"
   },
 
   "metaTags": {

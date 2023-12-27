@@ -37,7 +37,7 @@ export default function GetAllTechnologies({jobs}) {
             >
               <div className="flex flex-row justify-between text-xs sm:text-sm md:text-sm xl:text-base 2xl:text-lg">
                 <div>
-                  {locale === "sv" ? job.title : job.titleEn}
+                  {`${job.company} | ${locale === "sv" ? job.title : job.titleEn}`}
                 </div>
                 <div>
                   <i className="bi bi-chevron-down"></i>
@@ -95,29 +95,16 @@ export default function GetAllTechnologies({jobs}) {
                           <div className="mt-4 mb-8">
                             {locale === "sv" ? job.text : job.textEn}
                           </div> 
-
-                          <hr/>  
                           
                           {job.referenceText && (
+                            <>
+                              <hr/>  
                               <div className="mt-4 italic">
                                 "{locale === "sv" ? job.referenceText : job.referenceTextEn}"
-                              </div>    
+                              </div>   
+                            </>
                             )
                           }
-
-                          {job.referenceName && (
-                            <div className="mt-4">
-                              <i class="bi bi-person-circle"></i>&nbsp;
-                              {job.referenceName}
-                            </div>  
-                          )}
-
-                          {job.referenceEmail && (
-                            <div className="mt-2">
-                              <i className="bi bi-envelope"></i>&nbsp;
-                              <a href={`mailto:${job.referenceEmail}`} target="_blank" rel="noreferrer" aria-label="Email">{job.referenceEmail}</a>
-                            </div>
-                          )}            
                         </motion.div>
                       )}
                     </div>
