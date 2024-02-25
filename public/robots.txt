@@ -4,6 +4,10 @@ Disallow: /admin/*
 
 # *
 User-agent: *
+Disallow: /*/admin/*
+
+# *
+User-agent: *
 Allow: /
 
 # Host

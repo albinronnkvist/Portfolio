@@ -6,8 +6,12 @@ module.exports = {
   robotsTxtOptions: {
     policies: [
       { userAgent: "*", disallow: "/admin/*" },
+      { userAgent: "*", disallow: "/*/admin/*" },
       { userAgent: "*", allow: "/" },
     ]
   },
-  exclude: ["/admin/*"]
+  exclude: [
+    "/admin/*", 
+    "/*/admin/*"
+  ]
 }
