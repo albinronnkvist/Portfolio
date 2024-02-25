@@ -15,7 +15,7 @@ export default function AdminDeleteTechnology() {
     try {
       await deleteDoc(doc(db, "technologies", id))
       setLoading(false)
-      alert("Teknologi raderad.")
+      alert("Technology was deleted")
       router.back();
     } catch(error) {
       setLoading(false)
@@ -30,7 +30,7 @@ export default function AdminDeleteTechnology() {
       className="formInputButton bg-red dark:bg-red w-auto py-2 px-4"
     >
       {!loading ? ( 
-        <>Radera teknologi</>
+        <>Delete</>
       ) : (
         <LoadingButton />
       )}

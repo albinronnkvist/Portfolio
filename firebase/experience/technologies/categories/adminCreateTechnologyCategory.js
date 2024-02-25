@@ -33,7 +33,7 @@ export default function AdminCreateTechnologyCategory() {
     try {
       await setDoc(doc(collection(db, "technologiesCategories")), object);
       setLoading(false)
-      alert("Teknologi-kategori skapad!")
+      alert("Technology category was created")
       clearState()
       clearForm()
     } catch(error) {
@@ -52,7 +52,7 @@ export default function AdminCreateTechnologyCategory() {
           <div>
             <div className="flex flex-row gap-4 w-full">
               <div className="w-1/2">
-                <label>Titel</label>
+                <label>Title</label>
                 <br/>
                 <input 
                   type="text" 
@@ -65,7 +65,7 @@ export default function AdminCreateTechnologyCategory() {
                 />
               </div>
               <div className="w-1/2">
-                <label>Titel (Engelska)</label>
+                <label>Title (Engelska)</label>
                 <br/>
                 <input 
                   type="text" 
@@ -81,7 +81,7 @@ export default function AdminCreateTechnologyCategory() {
           </div>
 
         <div>
-          <label>Ikon</label>
+          <label>Icon</label>
           <br/>
           <input 
             type="text" 
@@ -95,7 +95,7 @@ export default function AdminCreateTechnologyCategory() {
         <div className="w-full">
           <button disabled={loading} type="submit" className="submit">
             {!loading ? ( 
-              <>Skapa</>
+              <>Create</>
             ) : (
               <LoadingButton />
             )}

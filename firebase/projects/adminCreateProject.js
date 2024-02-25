@@ -64,13 +64,12 @@ export default function AdminCreateProject() {
 
     uploadTask.on('state_changed',
       (snapshot) => {
-        // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 
         if(progress !== 100) {
-          setImageLoading(`Laddar upp bild...`)
+          setImageLoading(`Uploading image...`)
         } else {
-          setImageLoading(`Bilden är uppladdad. Skapar nu projektet...`)
+          setImageLoading(`Image was uploaded. Creating project...`)
         }
       }, 
       (error) => {
@@ -78,18 +77,17 @@ export default function AdminCreateProject() {
         // https://firebase.google.com/docs/storage/web/handle-errors
         switch (error.code) {
           case 'storage/unauthorized':
-            alert("Du har inte behörighet")
+            alert("Unauthorized")
             break
           case 'storage/canceled':
-            alert("Du avbröt uppladningen")
+            alert("Upload cancelled")
             break
           case 'storage/unknown':
-            alert("Oklart fel")
+            alert("Unknown error")
             break
         }
       }, 
       () => {
-        // Upload completed successfully, now we can get the download URL
         getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
           const object = { 
             title: title,
@@ -111,7 +109,7 @@ export default function AdminCreateProject() {
           try {
             await setDoc(doc(collection(db, "projects")), object);
             setLoading(false)
-            alert("Projekt skapat!")
+            alert("Project was created")
             clearState()
             clearForm()
           } catch(error) {
@@ -133,7 +131,7 @@ export default function AdminCreateProject() {
           <div>
             <div className="flex flex-row gap-4 w-full">
               <div className="w-1/2">
-                <label>Titel</label>
+                <label>Title</label>
                 <br/>
                 <input 
                   type="text" 
@@ -146,7 +144,7 @@ export default function AdminCreateProject() {
                 />
               </div>
               <div className="w-1/2">
-                <label>Titel (Engelska)</label>
+                <label>Title (Engelska)</label>
                 <br/>
                 <input 
                   type="text" 
@@ -164,7 +162,7 @@ export default function AdminCreateProject() {
           <div>
             <div className="flex flex-row gap-4 w-full">
               <div className="w-1/2">
-                <label>Utdrag</label>
+                <label>Excerpt</label>
                 <br/>
                 <textarea 
                   name="excerpt"
@@ -176,7 +174,7 @@ export default function AdminCreateProject() {
                 />
               </div>
               <div className="w-1/2">
-                <label>Utdrag (Engelska)</label>
+                <label>Excerpt (Engelska)</label>
                 <br/>
                 <textarea 
                   name="excerptEn"
@@ -221,7 +219,7 @@ export default function AdminCreateProject() {
           </div>
 
           <div>
-            <label>Bild</label>
+            <label>Image</label>
             <br/>
             <label className=" w-40 flex flex-col items-center py-4 px-6 bg-primary-dark dark:bg-primary-default text-white dark:text-black-dark rounded cursor-pointer hover:opacity-75 transition-opacity duration-200">
               <i class="bi bi-file-arrow-up"></i>
@@ -274,7 +272,7 @@ export default function AdminCreateProject() {
           </div>
 
           <div>
-            <label>År</label>
+            <label>Year</label>
             <br/>
             <input 
               type="number" 
@@ -287,7 +285,7 @@ export default function AdminCreateProject() {
           </div>
 
           <div>
-            <label>Utvalt</label>
+            <label>Featured</label>
             <br/>
             <input 
               type="checkbox" 
@@ -311,7 +309,7 @@ export default function AdminCreateProject() {
           </div>
 
           <div>
-            <label>Hemsida</label>
+            <label>Website</label>
             <br/>
             <input 
               type="text" 
@@ -323,7 +321,7 @@ export default function AdminCreateProject() {
           </div>
 
           <div>
-            <label>Rapport</label>
+            <label>Essay</label>
             <br/>
             <input 
               type="text" 
@@ -338,7 +336,7 @@ export default function AdminCreateProject() {
           <p>{imageLoading}</p>
           <button disabled={loading} type="submit" className="submit">
             {!loading ? ( 
-              <>Skapa</>
+              <>Create</>
             ) : (
               <LoadingButton />
             )}

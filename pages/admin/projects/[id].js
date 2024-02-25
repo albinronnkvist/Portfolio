@@ -32,12 +32,12 @@ export default function AdminSingleProject({ project }) {
       <h1>{project.name}</h1>
       
       <section className="mb-8">
-        <h2>Radera</h2>
+        <h2>Delete</h2>
         <AdminDeleteProject project={project} />
       </section>
       
       <section>
-        <h2>Redigera</h2>
+        <h2>Edit</h2>
         <AdminEditProject project={project} />
       </section>
     </AuthProvider>

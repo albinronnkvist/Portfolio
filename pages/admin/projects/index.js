@@ -25,12 +25,12 @@ export default function AdminProjects({ projects }) {
       <Breadcrumbs crumbs={crumbs} />
       <h1>{t("navigation:menu.projects")}</h1>
       <section>
-        <h2>Alla projekt</h2>
+        <h2>All projects</h2>
         <AdminGetAllProjects projects={projects} />
       </section>
 
       <section className="mt-12">
-        <h2>Skapa projekt</h2>
+        <h2>Create project</h2>
         <AdminCreateProject />
       </section>
     </AuthProvider>

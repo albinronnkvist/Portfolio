@@ -79,7 +79,7 @@ export default function AdminCreateCourse() {
     try {
       await setDoc(doc(db, "courses", object.id), object);
       setLoading(false)
-      alert("Kurs skapad!")
+      alert("Course was created")
       clearState()
       clearForm()
     } catch(error) {
@@ -95,9 +95,9 @@ export default function AdminCreateCourse() {
         onSubmit={createCourse} 
         className="rounded w-full p-4 dark:bg-gray-light bg-white shadow-xl flex flex-col gap-4"
       >
-        <h4>Om kursen</h4>
+        <h4>About the course</h4>
           <div>
-            <label>Kurs id</label>
+            <label>Course Id</label>
             <br/>
             <input 
               type="text" 
@@ -113,7 +113,7 @@ export default function AdminCreateCourse() {
           <div>
             <div className="flex flex-row gap-4 w-full">
               <div className="w-1/2">
-                <label>Titel</label>
+                <label>Title</label>
                 <br/>
                 <input 
                   type="text" 
@@ -126,7 +126,7 @@ export default function AdminCreateCourse() {
                 />
               </div>
               <div className="w-1/2">
-                <label>Titel (Engelska)</label>
+                <label>Title (English)</label>
                 <br/>
                 <input 
                   type="text" 
@@ -144,7 +144,7 @@ export default function AdminCreateCourse() {
           <div>
             <div className="flex flex-row gap-4 w-full">
               <div className="w-1/2">
-                <label>Utdrag</label>
+                <label>Excerpt</label>
                 <br/>
                 <textarea 
                   name="excerpt"
@@ -156,7 +156,7 @@ export default function AdminCreateCourse() {
                 />
               </div>
               <div className="w-1/2">
-                <label>Utdrag (Engelska)</label>
+                <label>Excerpt (Engelska)</label>
                 <br/>
                 <textarea 
                   name="excerptEn"
@@ -201,7 +201,7 @@ export default function AdminCreateCourse() {
           </div>
 
           <div>
-            <label>Kursplan</label>
+            <label>Courseplan</label>
             <br/>
             <input 
               type="text" 
@@ -214,7 +214,7 @@ export default function AdminCreateCourse() {
           </div>
 
           <div>
-            <label>Nivå</label>
+            <label>Level</label>
             <br/>
             <select 
               name="level"
@@ -230,7 +230,7 @@ export default function AdminCreateCourse() {
           </div>
 
           <div>
-            <label>Poäng</label>
+            <label>Points</label>
             <br/>
             <input 
               type="number" 
@@ -281,9 +281,9 @@ export default function AdminCreateCourse() {
 
 
           <hr className="text-white mt-2 mb-6"/>
-          <h4>Dina framsteg</h4>
+          <h4>Progress</h4>
           <div>
-            <label>År</label>
+            <label>Year</label>
             <br/>
             <input 
               type="number" 
@@ -295,7 +295,7 @@ export default function AdminCreateCourse() {
           </div>
 
           <div>
-            <label>Genomfört</label>
+            <label>Completed</label>
             <br/>
             <input 
               type="checkbox" 
@@ -307,7 +307,7 @@ export default function AdminCreateCourse() {
           </div>
 
           <div>
-            <label>Betyg</label>
+            <label>Grade</label>
             <br/>
             <select 
               onChange={(event) => {
@@ -327,7 +327,7 @@ export default function AdminCreateCourse() {
 
 
           <hr className="text-white mt-2 mb-6"/>
-          <h4>Ditt projekt</h4>
+          <h4>Project</h4>
 
           <div>
             <label>Repository</label>
@@ -342,7 +342,7 @@ export default function AdminCreateCourse() {
           </div>
 
           <div>
-            <label>Hemsida</label>
+            <label>Website</label>
             <br/>
             <input 
               type="text" 
@@ -354,7 +354,7 @@ export default function AdminCreateCourse() {
           </div>
 
           <div>
-            <label>Rapport</label>
+            <label>Essay</label>
             <br/>
             <input 
               type="text" 
@@ -368,7 +368,7 @@ export default function AdminCreateCourse() {
         <div className="w-full">
           <button disabled={loading} type="submit" className="submit">
             {!loading ? ( 
-              <>Skapa</>
+              <>Create</>
             ) : (
               <LoadingButton />
             )}

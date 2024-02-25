@@ -36,7 +36,7 @@ export default function AdminEditTechnology({technology, categories}) {
       await updateDoc(doc(db, "technologies", id), newData)
       
       setLoading(false)
-      alert("Teknologi uppdaterad.")
+      alert("Technology was updated")
     } catch(error) {
       setLoading(false)
       alert(error)
@@ -51,7 +51,7 @@ export default function AdminEditTechnology({technology, categories}) {
         className="rounded w-full p-4 dark:bg-gray-light bg-white shadow-xl flex flex-col gap-4"
       >
         <div>
-          <label>kategori</label>
+          <label>Category</label>
           <br/>
           <select 
             defaultValue={category}
@@ -68,7 +68,7 @@ export default function AdminEditTechnology({technology, categories}) {
         </div>
 
         <div>
-          <label>Titel</label>
+          <label>Title</label>
           <br/>
           <input 
             type="text" 
@@ -83,7 +83,7 @@ export default function AdminEditTechnology({technology, categories}) {
         </div>
 
         <div>
-          <label>Ikon</label>
+          <label>Icon</label>
           <br/>
           <input 
             type="text" 
@@ -96,7 +96,7 @@ export default function AdminEditTechnology({technology, categories}) {
         </div>
 
         <div>
-          <label>Nyligen</label>
+          <label>Recent</label>
           <br/>
           <input 
             type="checkbox" 
@@ -111,7 +111,7 @@ export default function AdminEditTechnology({technology, categories}) {
         <div className="w-full">
           <button type="submit" className="submit">
           {!loading ? ( 
-            <>Uppdatera</>
+            <>Update</>
           ) : (
             <LoadingButton />
           )}

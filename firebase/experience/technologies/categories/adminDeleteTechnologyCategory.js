@@ -15,7 +15,7 @@ export default function AdminDeleteTechnologyCategory() {
     try {
       await deleteDoc(doc(db, "technologiesCategories", id))
       setLoading(false)
-      alert("Teknologi-kategori raderad.")
+      alert("Technology category was deleted")
       router.back();
     } catch(error) {
       setLoading(false)
@@ -29,7 +29,7 @@ export default function AdminDeleteTechnologyCategory() {
       className="formInputButton bg-red dark:bg-red w-auto py-2 px-4"
     >
       {!loading ? ( 
-        <>Radera kategorin</>
+        <>Delete</>
       ) : (
         <LoadingButton />
       )}

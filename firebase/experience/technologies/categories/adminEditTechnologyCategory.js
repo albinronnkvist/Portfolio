@@ -33,7 +33,7 @@ export default function AdminEditTechnologyCategory({category}) {
       await updateDoc(doc(db, "technologiesCategories", id), newData)
       
       setLoading(false)
-      alert("Teknologi-kategori uppdaterad.")
+      alert("Technology category was updated")
     } catch(error) {
       setLoading(false)
       alert(error)
@@ -50,7 +50,7 @@ export default function AdminEditTechnologyCategory({category}) {
           <div>
             <div className="flex flex-row gap-4 w-full">
               <div className="w-1/2">
-                <label>Titel</label>
+                <label>Title</label>
                 <br/>
                 <input 
                   type="text" 
@@ -64,7 +64,7 @@ export default function AdminEditTechnologyCategory({category}) {
                 />
               </div>
               <div className="w-1/2">
-                <label>Titel (Engelska)</label>
+                <label>Title (Engelska)</label>
                 <br/>
                 <input 
                   type="text" 
@@ -81,7 +81,7 @@ export default function AdminEditTechnologyCategory({category}) {
           </div>
 
         <div>
-          <label>Ikon</label>
+          <label>Icon</label>
           <br/>
           <input 
             type="text" 
@@ -96,7 +96,7 @@ export default function AdminEditTechnologyCategory({category}) {
         <div className="w-full">
           <button type="submit" className="submit">
           {!loading ? ( 
-            <>Uppdatera</>
+            <>Update</>
           ) : (
             <LoadingButton />
           )}

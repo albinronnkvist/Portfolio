@@ -36,12 +36,12 @@ export default function AdminSingleCourse({ course }) {
       <h1>{course.name}</h1>
       
       <section className="mb-8">
-        <h2>Radera</h2>
+        <h2>Delet</h2>
         <AdminDeleteCourse />
       </section>
       
       <section>
-        <h2>Redigera</h2>
+        <h2>Edit</h2>
         <AdminEditCourse course={course} />
       </section>
     </AuthProvider>

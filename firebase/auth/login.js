@@ -23,7 +23,7 @@ export default function Login() {
         router.push("/admin")
       }
     } catch(error) {
-      setError(`Login failed: ${error}`)
+      setError(`Failed to sign in: ${error}`)
     }
     setLoading(false)
   }
@@ -34,7 +34,7 @@ export default function Login() {
   } else {
     return (
       <div>
-        <h1>Logga in</h1>
+        <h1>Sign in</h1>
         <form 
           onSubmit={loginUser}
           className="w-full sm:w-1/2 md:w-1/3 rounded p-4 dark:bg-gray-light bg-white shadow-xl flex flex-col gap-4"
@@ -56,7 +56,7 @@ export default function Login() {
             />
           </div>
           <div>
-            <label>Lösenord</label>
+            <label>Password</label>
             <input 
               type="password" 
               className="formInput w-full" 
@@ -68,7 +68,7 @@ export default function Login() {
           </div>
           <button disabled={loading} type="submit" className="submit">
             {!loading ? ( 
-              <>Logga in</>
+              <>Sign in</>
             ) : (
               <LoadingButton />
             )}

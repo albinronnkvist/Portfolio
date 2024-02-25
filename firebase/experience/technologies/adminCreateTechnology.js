@@ -36,7 +36,7 @@ export default function AdminCreateTechnology({categories}) {
     try {
       await setDoc(doc(collection(db, "technologies")), object);
       setLoading(false)
-      alert("Teknologi skapad!")
+      alert("Technology was created")
       clearState()
       clearForm()
     } catch(error) {
@@ -53,7 +53,7 @@ export default function AdminCreateTechnology({categories}) {
         className="rounded w-full p-4 dark:bg-gray-light2 bg-white shadow-xl flex flex-col gap-4"
       >
           <div>
-            <label>kategori</label>
+            <label>Category</label>
             <br/>
             <select 
               defaultValue={categories[0].title}
@@ -70,7 +70,7 @@ export default function AdminCreateTechnology({categories}) {
           </div>
 
           <div>
-            <label>Titel</label>
+            <label>Title</label>
             <br/>
             <input 
               type="text" 
@@ -84,7 +84,7 @@ export default function AdminCreateTechnology({categories}) {
           </div>
 
         <div>
-          <label>Ikon</label>
+          <label>Icon</label>
           <br/>
           <input 
             type="text" 
@@ -96,7 +96,7 @@ export default function AdminCreateTechnology({categories}) {
         </div>
 
         <div>
-          <label>Nyligen</label>
+          <label>Recent</label>
           <br/>
           <input 
             type="checkbox" 
@@ -110,7 +110,7 @@ export default function AdminCreateTechnology({categories}) {
         <div className="w-full">
           <button disabled={loading} type="submit" className="submit">
             {!loading ? ( 
-              <>Skapa</>
+              <>Create</>
             ) : (
               <LoadingButton />
             )}

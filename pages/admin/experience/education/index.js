@@ -29,12 +29,12 @@ export default function AdminEducation({ courses }) {
       <Breadcrumbs crumbs={crumbs} />
       <h1>{t("navigation:subSections.education")}</h1>
       <section>
-        <h2>Alla kurser</h2>
+        <h2>All courses</h2>
         <AdminGetAllCourses courses={courses} />
       </section>
 
       <section className="mt-12">
-        <h2>Skapa kurs</h2>
+        <h2>Create course</h2>
         <AdminCreateCourse />
       </section>
     </AuthProvider>

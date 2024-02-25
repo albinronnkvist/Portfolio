@@ -33,24 +33,24 @@ export default function AdminTechnologies({ categories, technologies }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="w-full dark:bg-gray-light bg-white shadow-xl rounded-md h-full p-5">
           <section>
-            <h2>Skapa kategori</h2>
+            <h2>Create category</h2>
             <AdminCreateTechnologyCategory />
           </section>
 
           <section className="mt-4">
-            <h2>Alla kategorier</h2>
+            <h2>All categories</h2>
             <AdminGetAllTechnologyCategories categories={categories} />
           </section>
         </div>
 
         <div className="w-full dark:bg-gray-light bg-white shadow-xl rounded-md h-full p-5">
           <section>
-            <h2>Skapa teknologi</h2>
+            <h2>Create technology</h2>
             <AdminCreateTechnology categories={categories} />
           </section>
           
           <section className="mt-4">
-            <h2>Alla teknologier</h2>
+            <h2>All technologies</h2>
             <AdminGetAllTechnologies technologies={technologies} categories={categories} />
           </section>
         </div>

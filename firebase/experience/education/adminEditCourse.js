@@ -81,7 +81,7 @@ export default function AdminEditCourse({course}) {
       await updateDoc(doc(db, "courses", newData.id), newData)
       
       setLoading(false)
-      alert("Kurs uppdaterad.")
+      alert("Course was updated")
     } catch(error) {
       setLoading(false)
       alert(error)
@@ -95,9 +95,9 @@ export default function AdminEditCourse({course}) {
         onSubmit={updateCourse} 
         className="rounded w-full p-4 dark:bg-gray-light bg-white shadow-xl flex flex-col gap-4"
       >
-        <h4>Om kursen</h4>
+        <h4>About</h4>
           <div>
-            <label>Kurs id</label>
+            <label>Course Id</label>
             <br/>
             <input 
               type="text" 
@@ -114,7 +114,7 @@ export default function AdminEditCourse({course}) {
           <div>
             <div className="flex flex-row gap-4 w-full">
               <div className="w-1/2">
-                <label>Titel</label>
+                <label>Title</label>
                 <br/>
                 <input 
                   type="text" 
@@ -128,7 +128,7 @@ export default function AdminEditCourse({course}) {
                 />
               </div>
               <div className="w-1/2">
-                <label>Titel (Engelska)</label>
+                <label>Title (Engelska)</label>
                 <br/>
                 <input 
                   type="text" 
@@ -147,7 +147,7 @@ export default function AdminEditCourse({course}) {
           <div>
             <div className="flex flex-row gap-4 w-full">
               <div className="w-1/2">
-                <label>Utdrag</label>
+                <label>Excerpt</label>
                 <br/>
                 <textarea 
                   name="excerpt"
@@ -160,7 +160,7 @@ export default function AdminEditCourse({course}) {
                 />
               </div>
               <div className="w-1/2">
-                <label>Utdrag (Engelska)</label>
+                <label>Excerpt (Engelska)</label>
                 <br/>
                 <textarea 
                   name="excerptEn"
@@ -208,7 +208,7 @@ export default function AdminEditCourse({course}) {
           </div>
 
           <div>
-            <label>Kursplan</label>
+            <label>Courseplan</label>
             <br/>
             <input 
               type="text" 
@@ -222,7 +222,7 @@ export default function AdminEditCourse({course}) {
           </div>
 
           <div>
-            <label>Nivå</label>
+            <label>Level</label>
             <br/>
             <select 
               name="level"
@@ -239,7 +239,7 @@ export default function AdminEditCourse({course}) {
           </div>
 
           <div>
-            <label>Poäng</label>
+            <label>Points</label>
             <br/>
             <input 
               type="number" 
@@ -290,9 +290,9 @@ export default function AdminEditCourse({course}) {
 
 
           <hr className="text-white mt-2 mb-6"/>
-          <h4>Dina framsteg</h4>
+          <h4>Progress</h4>
           <div>
-            <label>År</label>
+            <label>Year</label>
             <br/>
             <input 
               type="number" 
@@ -305,7 +305,7 @@ export default function AdminEditCourse({course}) {
           </div>
 
           <div>
-            <label>Genomfört</label>
+            <label>Completed</label>
             <br/>
             <input 
               type="checkbox" 
@@ -318,7 +318,7 @@ export default function AdminEditCourse({course}) {
           </div>
 
           <div>
-            <label>Betyg</label>
+            <label>Grade</label>
             <br/>
             <select 
               onChange={(event) => {
@@ -339,7 +339,7 @@ export default function AdminEditCourse({course}) {
 
 
           <hr className="text-white mt-2 mb-6"/>
-          <h4>Ditt projekt</h4>
+          <h4>Project</h4>
 
           <div>
             <label>Repository</label>
@@ -355,7 +355,7 @@ export default function AdminEditCourse({course}) {
           </div>
 
           <div>
-            <label>Hemsida</label>
+            <label>Website</label>
             <br/>
             <input 
               type="text" 
@@ -368,7 +368,7 @@ export default function AdminEditCourse({course}) {
           </div>
 
           <div>
-            <label>Rapport</label>
+            <label>Essay</label>
             <br/>
             <input 
               type="text" 
@@ -383,7 +383,7 @@ export default function AdminEditCourse({course}) {
         <div className="w-full">
           <button type="submit" className="submit">
           {!loading ? ( 
-            <>Uppdatera</>
+            <>Update</>
           ) : (
             <LoadingButton />
           )}

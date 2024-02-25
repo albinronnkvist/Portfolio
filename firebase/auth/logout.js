@@ -11,15 +11,15 @@ export default function Logout() {
     try {
       await signOut(auth)
     } catch(error) {
-      setError(`Utloggning misslyckades: ${error}`)
+      setError(`Failed to sign out: ${error}`)
     }
   }
 
   return (
     <div className="mt-8">
-      <p className="mb-2">Inloggad som: {currentUser.email}</p>
+      <p className="mb-2">Signed in as: {currentUser.email}</p>
       <button onClick={logOutUser} className="formInputButton bg-red dark:bg-red w-auto py-2 px-4">
-        Logga ut
+        Sign out
       </button>
     </div>
   )

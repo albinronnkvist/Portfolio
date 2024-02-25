@@ -36,12 +36,12 @@ export default function AdminEditCategory({ category }) {
       <h1>{category.title}</h1>
       
       <section className="mb-8">
-        <h2>Radera</h2>
+        <h2>Delete</h2>
         <AdminDeleteTechnologyCategory />
       </section>
       
       <section>
-        <h2>Redigera</h2>
+        <h2>Edit</h2>
         <AdminEditTechnologyCategory category={category} />
       </section>
     </AuthProvider>

@@ -20,7 +20,7 @@ export default function AdminDeleteProject({ project }) {
       await deleteDoc(projectRef)
       await deleteObject(imageRef)
       setLoading(false)
-      alert("Projekt raderat.")
+      alert("Project was deleted")
       router.back();
     } catch(error) {
       setLoading(false)
@@ -34,7 +34,7 @@ export default function AdminDeleteProject({ project }) {
       className="formInputButton bg-red dark:bg-red w-auto py-2 px-4"
     >
       {!loading ? ( 
-        <>Radera projektet</>
+        <>Delete</>
       ) : (
         <LoadingButton />
       )}

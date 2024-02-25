@@ -16,7 +16,7 @@ export default function AdminDeleteCourse() {
     try {
       await deleteDoc(courseRef)
       setLoading(false)
-      alert("Kurs raderad.")
+      alert("Course was deleted")
       router.back();
     } catch(error) {
       setLoading(false)
