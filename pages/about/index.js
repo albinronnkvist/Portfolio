@@ -68,7 +68,9 @@ export default function About({interests}) {
                   {t("about:text").substr(166)}
                   <br/><br/>
                   {t("about:text2")}
-                  
+                  <br/><br/>
+                  {t("about:text3")}
+
                   &nbsp;
                   <button 
                     onClick={showMoreText} 
@@ -84,9 +86,6 @@ export default function About({interests}) {
         </div>
 
         <h2 className="mt-12 lg:mt-24">{t("about:interests")}</h2>
-        <p className="md:w-3/5 xl:w-1/2">
-          {t("about:text3")}
-        </p>
         <GetAllInterests interests={interests} />  
       </section>  
     </>

@@ -92,8 +92,8 @@ export default function Home() {
                     duration: .3
                   }
                 }
-              }} className="mt-0 md:w-5/6">
-              {t("start:intro2")}
+              }} className="mt-4 md:w-5/6">
+              {t("experience:intro")}
             </motion.p>
             <Link 
               to="about"
