@@ -8,7 +8,7 @@ export default function Footer() {
           &copy; {year} Albin Rönnkvist
         </p>
         <div className="flex flex-row gap-8 text-xl justify-center items-center mt-4">
-          <a href="mailto:kontakt@albinronnkvist.se" target="_blank" rel="noreferrer" className="text-white" aria-label="Email"><i className="bi bi-envelope"></i></a>
+          <a href="mailto:albinronnkvist@protonmail.com" target="_blank" rel="noreferrer" className="text-white" aria-label="Email"><i className="bi bi-envelope"></i></a>
           <a href="https://github.com/albinronnkvist" target="_blank" rel="noreferrer" className="text-white" aria-label="Github"><i className="bi bi-github"></i></a>
           <a href="https://stackoverflow.com/users/15634040/albinr" target="_blank" rel="noreferrer" className="text-white" aria-label="Stack Overflow"><i className="bi bi-stack-overflow"></i></a>
           <a href="https://medium.com/@albinronnkvist" target="_blank" rel="noreferrer" className="text-white" aria-label="Medium"><i className="bi bi-medium"></i></a>
