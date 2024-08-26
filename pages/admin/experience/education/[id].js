@@ -36,7 +36,7 @@ export default function AdminSingleCourse({ course }) {
       <h1>{course.name}</h1>
       
       <section className="mb-8">
-        <h2>Delet</h2>
+        <h2>Delete</h2>
         <AdminDeleteCourse />
       </section>
       
