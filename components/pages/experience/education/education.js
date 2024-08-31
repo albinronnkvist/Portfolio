@@ -27,7 +27,7 @@ export default function Education({courses}) {
   }, [])
 
   return (
-    <section id="education" className="w-full mt-12 pt-4">
+    <section id="education" className="w-full mt-24">
       <h2>{t("experience:education.title")}</h2>
       <p className="text-xs xl:text-sm">{t("experience:education.credits")}: <b>{credits}</b></p>
       <div ref={observe}>

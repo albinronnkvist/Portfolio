@@ -24,14 +24,14 @@ export default function Experience({courses, technologies, categories, jobs}) {
         <Breadcrumbs crumbs={crumbs} />
         <h1>{t("navigation:menu.experience")}</h1>
         <div className="w-full md:w-3/5 xl:w-1/2">
-        <p>
-          {t("experience:intro")}
-        </p>
-      </div>
+          <p>
+            {t("experience:intro")}
+          </p>
+        </div>
 
+        <Work jobs={jobs} />
         <Education courses={courses} />
         <Technologies technologies={technologies} categories={categories} />
-        <Work jobs={jobs} />
       </section>
     </>
   )

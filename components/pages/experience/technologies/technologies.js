@@ -14,7 +14,7 @@ export default function Education({technologies, categories}) {
   })
 
   return (
-    <section id="technologies" className="w-full mt-24 md:mt-48">
+    <section id="technologies" className="w-full mt-24">
       <h2>{t("experience:technologies.title")}</h2>
       <div className="w-full md:w-3/5 xl:w-1/2">
         <p>
