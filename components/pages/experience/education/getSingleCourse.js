@@ -26,6 +26,13 @@ export default function GetSingleCourse({course}) {
                 ))}
               </div>
             )}
+            <div className="flex flex-row gap-2 mt-2">
+              {!course.complete && (
+                <p className="text-yellow-500 dark:text-yellow-300 text-xxs xl:text-xs italic animate-pulse">
+                  {locale === "sv" ? ( "Pågår" ) : ( "Ongoing" )}
+                </p>
+              )}
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 lg:mt-12">
               <div className="flex flex-col w-full h-full">
                 <p>
@@ -38,8 +45,12 @@ export default function GetSingleCourse({course}) {
                 <ul className="dark:text-white mb-4 mt-2 list-disc ml-5">
                   <li>{t("experience:education.points")}: {course.points}</li>
                   <li>{t("experience:education.level")}: {course.level}</li>
-                  <li>{t("experience:education.complete")}: {course.year}</li>
-                  <li>{t("experience:education.grade")}: {course.grade}</li>
+                  {course.complete && (
+                    <>
+                      <li>{t("experience:education.complete")}: {course.year}</li>
+                      <li>{t("experience:education.grade")}: {course.grade}</li>
+                    </>
+                  )}
                 </ul>
                 <a 
                   href={course.courseplan} 
