@@ -1,6 +1,12 @@
 {
   "title": "Erfarenhet",
   "intro": "Jag har en högskoleexamen med inriktning på datateknik från Mittuniversitetet och har tidigare arbetat som utvecklare på Tradera och Avarda. För närvarande fokuserar jag på att slutföra en kandidatexamen inom datateknik, som förväntas vara klart våren 2025.",
+  
+  "work": {
+    "title": "Arbetslivserfarenhet",
+    "intro": "Min arbetslivserfarenhet inom IT, främst som utvecklare:"
+  },
+
   "education": {
     "title": "Utbildning",
     "intro": "Jag har Högskoleexamen(120hp) med inriktning mot datateknik. Jag studerade på Mittuniversitetet på heldistans.",
@@ -29,10 +35,6 @@
     "allText": "Fler tekniker jag har erfarenhet av:"
   },
 
-  "work": {
-    "title": "Arbete",
-    "intro": "Tidigare arbetsplatser."
-  },
 
   "metaTags": {
     "description": "Min erfarenhet av webbutveckling med studier, teknologier och jobb",

@@ -2,6 +2,11 @@
   "title": "Experience",
   "intro": "I hold a Higher Education Diploma specializing in Computer Engineering at Mid Sweden University and have previously worked as a developer at Tradera and Avarda. I'm currently focusing on earning my Bachelor's Degree in Computer Engineering, which I expect to be completed in the spring of 2025.",
 
+  "work": {
+    "title": "Work Experience",
+    "intro": "My work experience in the IT field, mainly as a developer:"
+  },
+
   "education": {
     "title": "Education",
     "intro": "I have a University Diploma(120 hp) in Computer Engineering. I studied at Mid Sweden University, fully remote.",
@@ -30,10 +35,6 @@
     "allText": "Additional technologies I have experience with:"
   },
 
-  "work": {
-    "title": "Work",
-    "intro": "My professional background"
-  },
 
   "metaTags": {
     "description": "My experience with web development involving studies, different technologies and work",
