@@ -68,11 +68,15 @@ export default function GetAllTechnologies({jobs}) {
                               }
                             }
                           }} 
-                          className="flex flex-col mb-4 ml-5 transition-colors duration-300 text-xs sm:text-sm md:text-sm xl:text-base 2xl:text-lg"
+                          className="flex flex-col mb-4 transition-colors duration-300 text-xs sm:text-sm md:text-sm xl:text-base 2xl:text-lg"
                         >
-                          <div className="mb-2">
-                            <h3>{locale === "sv" ? job.title : job.titleEn}</h3>
-                          </div>
+
+                          <img
+                            src={job.image}
+                            alt="Screenshot of a website"
+                            className="rounded shadow-xl w-auto mb-6"
+                          />
+
                           {job.companyWebsite && (
                             <div>
                               <i className="bi bi-building" />&nbsp;
@@ -86,11 +90,6 @@ export default function GetAllTechnologies({jobs}) {
                             {locale === "sv" ? job.date : job.dateEn}
                           </div>  
 
-                          <img
-                            src={job.image}
-                            alt="Screenshot of a website"
-                            className="rounded shadow-xl w-auto mt-8"
-                          />
 
                           <div className="mt-4 mb-8">
                             {locale === "sv" ? job.text : job.textEn}
