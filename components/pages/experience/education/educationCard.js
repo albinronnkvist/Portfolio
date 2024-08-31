@@ -45,33 +45,16 @@ export default function EducationCard({ courses }) {
                   </div>
                 </div>
                 <div className="w-full h-full p-5">
-                  {locale === "sv" ? (
-                    <>
-                      <h3 className="text-base lg:text-lg xl:text-2xl">{course.title}</h3>
-                      <div className="flex flex-row gap-2 mb-2">
-                        <p className="text-xs xl:text-sm italic">{course.year}</p>
-                        {!course.complete && (
-                          <p className="text-yellow-500 dark:text-yellow-300 text-xxs xl:text-xs italic animate-pulse">
-                            Pågår
-                          </p>
-                        )}
-                      </div>
-                      <p className="text-xs xl:text-base">{course.excerpt}</p>
-                    </>
-                  ) : (
-                    <>
-                      <h4>{course.titleEn}</h4>
-                      <div className="flex flex-row gap-2 mb-2">
-                        <p className="text-xs xl:text-sm italic">{course.year}</p>
-                        {!course.complete && (
-                          <p className="text-yellow-500 dark:text-yellow-300 text-xxs xl:text-xs italic animate-pulse">
-                            Ongoing
-                          </p>
-                        )}
-                      </div>
-                      <p className="text-xs xl:text-base">{course.excerptEn}</p>
-                    </>
-                  )}
+                  <h3 className="text-base lg:text-lg xl:text-2xl">{locale === "sv" ? ( course.title ) : ( course.titleEn )}</h3>
+                  <div className="flex flex-row gap-2 mb-2">
+                    <p className="text-xs xl:text-sm italic">{course.year}</p>
+                    {!course.complete && (
+                      <p className="text-yellow-500 dark:text-yellow-300 text-xxs xl:text-xs italic animate-pulse">
+                        {locale === "sv" ? ( "Pågår" ) : ( "Ongoing" )}
+                      </p>
+                    )}
+                  </div>
+                  <p className="text-xs xl:text-base">{locale === "sv" ? ( course.excerpt ) : ( course.excerptEn )}</p>
                 </div>
                 {course.tags.length > 0 && (
                   <div className="w-full mt-auto p-5 flex flex-row gap-2 flex-wrap">
