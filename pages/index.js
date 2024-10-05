@@ -78,23 +78,6 @@ export default function Home() {
               }} className="mt-4 md:w-5/6">
               {getAge()}{t("start:intro1")}
             </motion.p>
-            <motion.p initial="hidden" animate="visible" 
-              variants={{
-                hidden: {
-                  scale: .8,
-                  opacity: 0
-                },
-                visible: {
-                  scale: 1,
-                  opacity: 1,
-                  transition: {
-                    delay: .6,
-                    duration: .3
-                  }
-                }
-              }} className="mt-4 md:w-5/6">
-              {t("experience:intro")}
-            </motion.p>
             <Link 
               to="about"
               spy={true}
