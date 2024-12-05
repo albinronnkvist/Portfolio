@@ -235,6 +235,7 @@ export default function AdminEditCourse({course}) {
             >
               <option value="A">A</option>
               <option value="B">B</option>
+              <option value="C">C</option>
             </select>
           </div>
 
